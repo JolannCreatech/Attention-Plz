@@ -1,0 +1,654 @@
+/* ============================================================================
+   Yoda — interface web
+   Tout le personnage est dessiné en CSS : pas d'image, pas de SVG.
+   La bouche est pilotée par la variable --mouth-open (0 → 1), que script.js
+   met à jour. On pourra donc la faire bouger à chaque token reçu du modèle.
+   ========================================================================== */
+
+:root {
+  --bg-0: #0a1310;
+  --bg-1: #122019;
+
+  --peau-0: #b3cd78;
+  --peau-1: #93b157;
+  --peau-2: #77963f;
+  --peau-3: #5f7c33;
+
+  --oeil: #f7f0cf;
+  --pupille: #182013;
+
+  --bulle-fond: #f2ead4;
+  --bulle-fond-2: #e6dabc;
+  --bulle-texte: #1d271b;
+
+  --robe-0: #c3b190;
+  --robe-1: #a8946f;
+  --robe-2: #8a7756;
+
+  --accent: #b6d97a;
+
+  --sortie: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px 40px;
+
+  background:
+    radial-gradient(120% 75% at 50% -10%, #1b3a2c 0%, transparent 58%),
+    radial-gradient(90% 55% at 50% 108%, #0e1a14 0%, transparent 70%),
+    var(--bg-0);
+
+  color: #e8efdd;
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+}
+
+/* ---------------------------------------------------------------- Mise en page */
+
+.scene {
+  position: relative;
+  width: min(680px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ---------------------------------------------------------------- Rappel de la question */
+
+.echo {
+  margin: 0;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(232, 239, 221, 0.38);
+  transition: opacity 0.4s var(--sortie);
+}
+
+.echo[hidden] {
+  display: none;
+}
+
+/* ---------------------------------------------------------------- La bulle */
+
+.bulle {
+  position: relative;
+  width: 100%;
+  min-height: 76px;
+  padding: 20px 26px;
+  border-radius: 20px;
+
+  background: linear-gradient(180deg, var(--bulle-fond) 0%, var(--bulle-fond-2) 100%);
+  color: var(--bulle-texte);
+
+  font-size: 1.06rem;
+  line-height: 1.58;
+
+  box-shadow:
+    0 18px 44px rgba(0, 0, 0, 0.48),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+
+  transition: transform 0.45s var(--sortie), opacity 0.3s ease;
+}
+
+/* La queue de la bulle, qui pointe vers Yoda */
+.bulle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  width: 26px;
+  height: 26px;
+  margin-left: -13px;
+
+  background: var(--bulle-fond-2);
+  border-radius: 0 0 7px 0;
+  transform: rotate(45deg);
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bulle__texte {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Le curseur clignote pendant que la réponse arrive */
+.bulle[data-state="parle"] .bulle__texte::after {
+  content: "▍";
+  margin-left: 2px;
+  opacity: 0.65;
+  animation: clignote 0.9s steps(1) infinite;
+}
+
+@keyframes clignote {
+  0%, 49% { opacity: 0.65; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Pendant la réflexion, la bulle pulse doucement */
+body.is-thinking .bulle {
+  animation: respire 1.6s ease-in-out infinite;
+}
+
+@keyframes respire {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.012); }
+}
+
+/* ---------------------------------------------------------------- Le personnage */
+
+.yoda {
+  --mouth-open: 0;
+
+  position: relative;
+  width: 340px;
+  height: 400px;
+  flex: 0 0 auto;
+
+  cursor: pointer;
+
+  animation: flotte 6.5s ease-in-out infinite;
+  filter: drop-shadow(0 26px 44px rgba(0, 0, 0, 0.55));
+  transition: filter 0.25s ease;
+}
+
+.yoda:hover {
+  filter: drop-shadow(0 26px 44px rgba(0, 0, 0, 0.55)) brightness(1.05);
+}
+
+.yoda:focus-visible {
+  outline: 3px solid rgba(182, 217, 122, 0.6);
+  outline-offset: 12px;
+  border-radius: 48px;
+}
+
+@keyframes flotte {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+/* Halo derrière le personnage */
+.yoda::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: 400px;
+  height: 400px;
+  margin: -200px 0 0 -200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(150, 200, 110, 0.2) 0%, transparent 62%);
+  z-index: -1;
+}
+
+/* --- Oreilles ------------------------------------------------------------- */
+
+.yoda__ears {
+  position: absolute;
+  left: 50%;
+  top: 130px;
+  width: 250px;
+  height: 0;
+  margin-left: -125px;
+}
+
+.ear {
+  position: absolute;
+  width: 104px;
+  height: 74px;
+  background: linear-gradient(180deg, #a3c066 0%, #86a54a 45%, #6a8738 100%);
+  filter: drop-shadow(0 6px 9px rgba(0, 0, 0, 0.3));
+}
+
+/* Léger relief : plus clair en haut, ombré en bas */
+.ear::after {
+  content: "";
+  position: absolute;
+  inset: 8% 10% 10% 10%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(64, 86, 28, 0.08) 45%,
+    rgba(44, 62, 18, 0.4) 100%
+  );
+}
+
+/* Les oreilles s'attachent au niveau des yeux et ne dépassent que de 74px :
+   le tiers de leur longueur reste caché derrière la tête. */
+.ear--left {
+  left: -74px;
+  top: 0;
+  clip-path: polygon(100% 12%, 4% 40%, 100% 88%);
+}
+
+.ear--right {
+  right: -74px;
+  top: 0;
+  clip-path: polygon(0% 12%, 96% 40%, 0% 88%);
+}
+
+/* --- Tête ---------------------------------------------------------------- */
+
+.yoda__head {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  width: 250px;
+  height: 200px;
+  margin-left: -125px;
+
+  border-radius: 48% 48% 40% 40% / 58% 58% 42% 42%;
+
+  background: radial-gradient(
+    120% 125% at 50% 6%,
+    var(--peau-0) 0%,
+    var(--peau-1) 38%,
+    var(--peau-2) 70%,
+    var(--peau-3) 100%
+  );
+
+  box-shadow:
+    inset -16px -20px 34px rgba(20, 38, 14, 0.42),
+    inset 12px 14px 30px rgba(255, 255, 255, 0.1);
+}
+
+/* --- Plis du front ------------------------------------------------------- */
+
+.yoda__wrinkles {
+  position: absolute;
+  left: 50%;
+  top: 22px;
+  width: 122px;
+  margin-left: -61px;
+}
+
+.yoda__wrinkles i {
+  display: block;
+  height: 13px;
+  border-top: 3px solid rgba(56, 78, 28, 0.45);
+  border-radius: 50%;
+}
+
+.yoda__wrinkles i:nth-child(1) { width: 122px; }
+.yoda__wrinkles i:nth-child(2) { width: 98px; margin: -7px auto 0; }
+.yoda__wrinkles i:nth-child(3) { width: 74px; margin: -7px auto 0; }
+
+/* --- Sourcils ------------------------------------------------------------ */
+
+.brow {
+  position: absolute;
+  top: 60px;
+  width: 64px;
+  height: 15px;
+  background: #4e6626;
+  border-radius: 50% 50% 30% 30%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.brow--left {
+  left: 40px;
+  transform: rotate(-9deg);
+}
+
+.brow--right {
+  right: 40px;
+  transform: rotate(9deg);
+}
+
+/* --- Yeux ---------------------------------------------------------------- */
+
+.eye {
+  position: absolute;
+  top: 82px;
+  width: 66px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  background: radial-gradient(
+    circle at 50% 38%,
+    #fdf8dd 0%,
+    var(--oeil) 42%,
+    #ddd09b 78%,
+    #bfb079 100%
+  );
+
+  box-shadow:
+    inset 0 -9px 13px rgba(58, 58, 18, 0.24),
+    0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.eye--left { left: 43px; }
+.eye--right { right: 43px; }
+
+.pupil {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 25px;
+  height: 31px;
+  margin: -15.5px 0 0 -12.5px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 32%, #3a4a2e 0%, var(--pupille) 62%);
+  transition: transform 0.3s var(--sortie);
+}
+
+/* Le reflet */
+.pupil::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* La paupière : elle descend pour cligner des yeux */
+.eye::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--peau-1), var(--peau-2));
+  transform: translateY(-101%);
+  animation: cligne 6.4s ease-in-out infinite;
+}
+
+@keyframes cligne {
+  0%, 91%, 100% { transform: translateY(-101%); }
+  93.5%, 96% { transform: translateY(0); }
+}
+
+/* En réfléchissant, Yoda plisse les yeux */
+body.is-thinking .eye::after {
+  animation: none;
+  transform: translateY(46%);
+}
+
+/* --- Nez ----------------------------------------------------------------- */
+
+.yoda__nose {
+  position: absolute;
+  left: 50%;
+  top: 124px;
+  width: 26px;
+  height: 24px;
+  margin-left: -13px;
+  border-radius: 50% 50% 45% 45% / 40% 40% 60% 60%;
+  background: linear-gradient(180deg, #9ab75a 0%, var(--peau-2) 80%, #6a8638 100%);
+  box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.28);
+}
+
+/* --- La bouche (l'élément animé) ----------------------------------------- */
+
+.yoda__mouth {
+  position: absolute;
+  left: 50%;
+  top: 176px;
+  width: 64px;
+  margin-left: -32px;
+  transform: translateY(-50%);
+
+  /* C'est ici que tout se joue : 0 = fermée, 1 = grande ouverte. */
+  height: calc(4px + var(--mouth-open) * 27px);
+
+  border-radius: 50%;
+  overflow: hidden;
+  background: #2a1a15;
+
+  box-shadow:
+    0 0 0 2px rgba(72, 94, 32, 0.6),
+    inset 0 5px 9px rgba(0, 0, 0, 0.85);
+
+  transition: height 70ms linear;
+}
+
+.mouth__inner {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    70% 90% at 50% 15%,
+    #4a2a20 0%,
+    #2a1a15 45%,
+    #140b08 100%
+  );
+}
+
+.mouth__tongue {
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 36px;
+  height: 17px;
+  margin-left: -18px;
+  border-radius: 50% 50% 0 0;
+  background: linear-gradient(180deg, #cd7670 0%, #a44d4b 100%);
+  opacity: calc(var(--mouth-open) * 1.7);
+}
+
+/* --- Robe ---------------------------------------------------------------- */
+
+.yoda__robe {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 254px;
+  height: 132px;
+  margin-left: -127px;
+
+  border-radius: 46% 46% 0 0 / 68% 68% 0 0;
+
+  background: linear-gradient(
+    180deg,
+    var(--robe-0) 0%,
+    var(--robe-1) 46%,
+    var(--robe-2) 100%
+  );
+
+  box-shadow:
+    inset -20px 0 34px rgba(0, 0, 0, 0.22),
+    inset 20px 0 34px rgba(0, 0, 0, 0.14);
+}
+
+/* L'encolure en V */
+.yoda__robe::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 0;
+  height: 0;
+  margin-left: -48px;
+  border-left: 48px solid transparent;
+  border-right: 48px solid transparent;
+  border-top: 58px solid #7e6b4d;
+}
+
+/* --- Réaction au clic ----------------------------------------------------
+   Les yeux se ferment, la bouche s'ouvre : script.js ajoute `is-reaction`
+   le temps de la réaction, et anime la bouche via --mouth-open.          */
+
+.yoda.is-reaction {
+  animation: sursaut 640ms var(--sortie);
+}
+
+.yoda.is-reaction .eye::after {
+  animation: none;
+  transform: translateY(0);
+}
+
+@keyframes sursaut {
+  0%   { transform: translateY(0) rotate(0deg); }
+  28%  { transform: translateY(-9px) rotate(-1.6deg); }
+  58%  { transform: translateY(2px) rotate(1.2deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* ---------------------------------------------------------------- Le formulaire */
+
+.ask {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.ask input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 18px;
+
+  border: 1px solid rgba(182, 217, 122, 0.26);
+  border-radius: 14px;
+
+  background: rgba(14, 26, 20, 0.72);
+  color: #e8efdd;
+
+  font: inherit;
+  font-size: 1rem;
+
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.ask input::placeholder {
+  color: rgba(232, 239, 221, 0.4);
+}
+
+.ask input:focus {
+  border-color: rgba(182, 217, 122, 0.72);
+  background: rgba(18, 34, 26, 0.86);
+  box-shadow: 0 0 0 4px rgba(182, 217, 122, 0.12);
+}
+
+.ask input:disabled {
+  opacity: 0.55;
+}
+
+.ask button {
+  flex: 0 0 auto;
+  width: 52px;
+  border: 0;
+  border-radius: 14px;
+
+  background: linear-gradient(180deg, var(--accent) 0%, #86ad4d 100%);
+  color: #14210f;
+
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+
+  box-shadow: 0 6px 16px rgba(134, 173, 77, 0.28);
+
+  transition: transform 0.14s var(--sortie), filter 0.2s ease, opacity 0.2s ease;
+}
+
+.ask button:hover:not(:disabled) { filter: brightness(1.08); }
+.ask button:active:not(:disabled) { transform: scale(0.94); }
+
+.ask button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+/* ---------------------------------------------------------------- Lucioles */
+
+.lucioles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.lucioles i {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #c8e08a;
+  box-shadow: 0 0 10px 3px rgba(200, 224, 138, 0.45);
+  opacity: 0;
+  animation: derive 14s linear infinite;
+}
+
+.lucioles i:nth-child(1) { left: 14%; top: 68%; animation-delay: 0s; }
+.lucioles i:nth-child(2) { left: 26%; top: 82%; animation-delay: 3.2s; }
+.lucioles i:nth-child(3) { left: 72%; top: 74%; animation-delay: 6.1s; }
+.lucioles i:nth-child(4) { left: 84%; top: 58%; animation-delay: 9.4s; }
+.lucioles i:nth-child(5) { left: 58%; top: 90%; animation-delay: 11.7s; }
+
+@keyframes derive {
+  0%   { opacity: 0; transform: translate(0, 0); }
+  15%  { opacity: 0.75; }
+  80%  { opacity: 0.5; }
+  100% { opacity: 0; transform: translate(26px, -150px); }
+}
+
+/* ---------------------------------------------------------------- Utilitaires */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------------------------------------------------------------- Accessibilité */
+
+@media (prefers-reduced-motion: reduce) {
+  .yoda,
+  .lucioles i,
+  body.is-thinking .bulle,
+  .eye::after,
+  .bulle[data-state="parle"] .bulle__texte::after {
+    animation: none !important;
+  }
+
+  .yoda__mouth,
+  .bulle,
+  .echo {
+    transition: none;
+  }
+}
+
+/* ---------------------------------------------------------------- Petit écran */
+
+@media (max-width: 520px) {
+  .yoda {
+    /* `scale` et non `transform` : la propriété individuelle se combine avec
+       l'animation `flotte`, qui anime déjà `transform`. */
+    scale: 0.82;
+    transform-origin: top center;
+    margin-bottom: -70px;
+  }
+
+  .bulle {
+    font-size: 0.98rem;
+    padding: 16px 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .bulle {
+    font-size: 0.92rem;
+    padding: 14px 16px;
+  }
+}

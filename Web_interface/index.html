@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Yoda</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="scene">
+
+    <!-- Petites lucioles, purement décoratives -->
+    <div class="lucioles" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i>
+    </div>
+
+    <!-- La question posée, rappelée discrètement -->
+    <p class="echo" id="echo" hidden></p>
+
+    <!-- La bulle : c'est ici que le texte du modèle s'affiche -->
+    <section class="bulle" id="bulle" data-state="idle" aria-live="polite">
+      <p class="bulle__texte" id="bulle-texte">Poser ta question, tu peux. Écouter, je saurai.</p>
+    </section>
+
+    <!-- Le personnage. Tout est en CSS, aucune image. -->
+    <div
+      class="yoda"
+      id="yoda"
+      role="button"
+      tabindex="0"
+      aria-label="Yoda — clique pour le faire réagir"
+      title="Clique-moi, tu peux"
+    >
+      <div class="yoda__ears" aria-hidden="true">
+        <span class="ear ear--left"></span>
+        <span class="ear ear--right"></span>
+      </div>
+
+      <div class="yoda__head" aria-hidden="true">
+        <div class="yoda__wrinkles"><i></i><i></i><i></i></div>
+
+        <span class="brow brow--left"></span>
+        <span class="brow brow--right"></span>
+
+        <div class="eye eye--left"><span class="pupil"></span></div>
+        <div class="eye eye--right"><span class="pupil"></span></div>
+
+        <div class="yoda__nose"></div>
+
+        <div class="yoda__mouth" id="mouth">
+          <div class="mouth__inner"></div>
+          <div class="mouth__tongue"></div>
+        </div>
+      </div>
+
+      <div class="yoda__robe" aria-hidden="true"></div>
+    </div>
+
+    <!-- La zone de saisie -->
+    <form class="ask" id="ask" autocomplete="off">
+      <label class="sr-only" for="question">Ta question</label>
+      <input
+        id="question"
+        name="question"
+        type="text"
+        placeholder="Que veux-tu savoir ?"
+        maxlength="220"
+        autofocus
+      />
+      <button type="submit" id="send" aria-label="Envoyer la question">
+        <span aria-hidden="true">→</span>
+      </button>
+    </form>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
