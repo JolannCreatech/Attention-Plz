@@ -67,7 +67,7 @@
     </button>
 
     <!-- La zone de saisie -->
-    <form class="ask" id="ask" autocomplete="off">
+    <form class="ask" id="ask" autocomplete="off" novalidate onsubmit="return false;">
       <label class="sr-only" for="question">Texte à traduire</label>
       <input
         id="question"
@@ -75,15 +75,32 @@
         type="text"
         placeholder="Bonjour mon ami !"
         maxlength="220"
+        autocomplete="off"
+        spellcheck="false"
         autofocus
       />
-      <button type="submit" id="send" aria-label="Traduire">
+      <button type="button" id="send" aria-label="Traduire">
         <span aria-hidden="true">→</span>
       </button>
     </form>
 
+    <!-- État de la connexion au serveur du modèle (cliquable pour réessayer) -->
+    <p class="etat" id="etat" data-etat="attente" role="status" title="Cliquer pour vérifier à nouveau">connexion au modèle…</p>
+
   </main>
 
-  <script src="script.js?v=3"></script>
+  <!-- Secours : si script.js ne se charge pas, on le dit au lieu de laisser le
+       formulaire recharger la page avec ?question=... -->
+  <script>
+    setTimeout(function () {
+      if (!window.__minionPret) {
+        var t = document.getElementById('bulle-texte');
+        var e = document.getElementById('etat');
+        if (t) t.textContent = "L'interface n'a pas pu démarrer. Ouvre la console (F12) pour voir l'erreur.";
+        if (e) { e.dataset.etat = 'ko'; e.textContent = 'script.js non chargé'; }
+      }
+    }, 2500);
+  </script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>

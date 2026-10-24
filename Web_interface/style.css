@@ -769,6 +769,50 @@ body.is-thinking .eye::after {
   cursor: default;
 }
 
+/* ---------------------------------------------------------------- État du serveur */
+
+.etat {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  padding: 3px 8px;
+
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(232, 238, 245, 0.42);
+
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.etat::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.etat[data-etat="attente"] {
+  color: rgba(255, 225, 77, 0.65);
+}
+
+.etat[data-etat="ok"] {
+  color: #8fe3a5;
+}
+
+.etat[data-etat="ko"] {
+  color: #ff9c8a;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+
 /* ---------------------------------------------------------------- Lucioles */
 
 .lucioles {
