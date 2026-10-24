@@ -1,44 +1,29 @@
 /* ============================================================================
-   Yoda — logique de l'interface
-   ----------------------------------------------------------------------------
-   Trois rôles, séparés volontairement :
-
-     1. `yoda`  → la bouche. Une seule chose à retenir : `yoda.onToken()` à
-                  chaque token reçu, et la bouche bouge.
-     2. `bulle` → le texte affiché.
-     3. `demander()` → ce qui se passe quand on pose une question.
-
-   Plus, à part : `reagir()`, déclenchée quand on clique sur Yoda (il ferme
-   les yeux et grogne).
-
-   Aujourd'hui `demander()` invente une réponse et la fait défiler token par
-   token. Le jour où le modèle tourne derrière un serveur, il suffit de
-   remplacer cette fonction (voir le bloc commenté tout en bas).
+   Traducteur minion — logique de l'interface
    ========================================================================== */
 
-const yodaEl   = document.getElementById('yoda');
+const minionEl = document.getElementById('minion');
 const bulleEl  = document.getElementById('bulle');
 const texteEl  = document.getElementById('bulle-texte');
 const echoEl   = document.getElementById('echo');
 const formEl   = document.getElementById('ask');
 const inputEl  = document.getElementById('question');
 const sendEl   = document.getElementById('send');
+const sensEl   = document.getElementById('sens');
+const sensTexteEl = document.getElementById('sens-texte');
 
 const attendre = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-/* ------------------------------------------------------------------ La bouche
-   `--mouth-open` va de 0 (fermée) à 1 (grande ouverte). C'est la seule chose
-   que le CSS attend pour animer la mâchoire.                               */
-
+/* ------------------------------------------------------------------ La bouche */
 const MOUTH_CLOSED = 0;
 const MOUTH_MAX = 1;
 
 function setMouth(value) {
   const v = Math.min(MOUTH_MAX, Math.max(MOUTH_CLOSED, value));
-  yodaEl.style.setProperty('--mouth-open', v.toFixed(3));
+  minionEl.style.setProperty('--mouth-open', v.toFixed(3));
 }
 
-/* Respiration au repos : la bouche s'entrouvre à peine, lentement. */
+/* Respiration au repos */
 let talking = false;
 let idleStart = performance.now();
 
@@ -52,7 +37,6 @@ function breathe(now) {
 
 requestAnimationFrame(breathe);
 
-/* Un battement de bouche. Appelé une fois par token. */
 let flapTimer = null;
 
 function flap() {
@@ -63,44 +47,39 @@ function flap() {
   }, 90);
 }
 
-/* L'API que le reste du code utilise. */
-const yoda = {
+const minion = {
   setMouth,
 
   startTalking() {
     talking = true;
     clearTimeout(flapTimer);
-    setMouth(0.12);
   },
 
   stopTalking() {
     talking = false;
     clearTimeout(flapTimer);
+    minionEl.classList.remove('is-talking');
+    minionEl.classList.remove('is-answering');
     setMouth(MOUTH_CLOSED);
     idleStart = performance.now();
   },
 
-  /** À appeler à chaque token reçu : la bouche s'ouvre d'un coup. */
   onToken() {
-    if (!talking) yoda.startTalking();
+    if (!talking) minion.startTalking();
     flap();
   },
 };
 
-/* ------------------------------------------------------- Réaction au clic
-   Yoda ferme les yeux (classe `is-reaction`, gérée en CSS) et ouvre la bouche
-   en trois temps, comme s'il grognait. On ne le fait pas pendant qu'il parle
-   ni pendant qu'il réfléchit, pour ne pas se battre avec l'animation.      */
-
+/* ------------------------------------------------------- Réaction au clic */
 let reacting = false;
 
 async function reagir() {
   if (reacting || talking || occupe) return;
 
   reacting = true;
-  talking = true; // fige la respiration le temps de la réaction
+  talking = true;
   clearTimeout(flapTimer);
-  yodaEl.classList.add('is-reaction');
+  minionEl.classList.add('is-reaction');
 
   const trame = [0.95, 0.3, 0.88, 0.22, 0.9, 0.05];
 
@@ -109,14 +88,14 @@ async function reagir() {
     await attendre(105);
   }
 
-  yodaEl.classList.remove('is-reaction');
-  yoda.stopTalking();
+  minionEl.classList.remove('is-reaction');
+  minion.stopTalking();
   reacting = false;
 }
 
-yodaEl.addEventListener('click', reagir);
+minionEl.addEventListener('click', reagir);
 
-yodaEl.addEventListener('keydown', (event) => {
+minionEl.addEventListener('keydown', (event) => {
   if (event.key === 'Enter' || event.key === ' ') {
     event.preventDefault();
     reagir();
@@ -124,177 +103,138 @@ yodaEl.addEventListener('keydown', (event) => {
 });
 
 /* -------------------------------------------------------------------- La bulle */
-
 const bulle = {
-  /** Vide la bulle et affiche le curseur clignotant. */
   start() {
     texteEl.textContent = '';
     bulleEl.dataset.state = 'parle';
   },
 
-  /** Ajoute un morceau de texte (un token, ou quelques caractères). */
   append(morceau) {
     texteEl.textContent += morceau;
   },
 
-  /** Fin de la réponse. */
   finish() {
     bulleEl.dataset.state = 'idle';
   },
 
-  /** Message système ("…" pendant la réflexion, message d'erreur…). */
   set(texte) {
     texteEl.textContent = texte;
     bulleEl.dataset.state = 'idle';
   },
 };
 
-/* ---------------------------------------------------------- Réponses d'attente
-   En attendant le vrai modèle. Une réponse est choisie à partir de la question,
-   pour qu'une même question donne toujours la même réponse.                 */
+/* -------------------------------------------------------------- Le sens de traduction */
+const TEXTES = {
+  'fr-minion': {
+    bouton: 'Français → Minion',
+    aria: 'Sens de traduction : français vers minion. Cliquer pour inverser.',
+    exemple: 'Bonjour mon ami !',
+    accueil: 'Bello ! Écris en français, et en minion je te le dis !',
+  },
+  'minion-fr': {
+    bouton: 'Minion → Français',
+    aria: 'Sens de traduction : minion vers français. Cliquer pour inverser.',
+    exemple: 'Bello amigo !',
+    accueil: 'Bello ! Écris en minion, et en français je te le dis !',
+  },
+};
 
-const REPONSES = [
-  "La peur, un feu elle est. Elle éclaire autant qu'elle brûle. Regarde-la, ne la fuis pas.",
-  "Le doute, un compagnon fidèle il est. Trop vite marcher, il ralentit. Mais jamais il ne ment.",
-  "Ton chemin, tu le portes. Nul autre ne peut marcher à ta place, ni pour toi se tromper.",
-  "Patience, tu dois apprendre. Le temps, un maître sévère il est, mais jamais injuste.",
-  "Ce que tu cherches, souvent déjà là il est. Tes yeux, il suffit de les ouvrir.",
-  "La colère, un nuage elle est. Passe, elle passe. Mais ce qu'elle cache, longtemps il reste.",
-  "Petit tu es, et pourtant tout l'univers en toi respire. L'oublier, voilà le seul vrai danger.",
-  "Une question poser, c'est déjà la moitié du chemin. L'autre moitié, marcher tu dois.",
-  "Le silence, une réponse aussi il est. Écouter, tu apprendras plus vite qu'en parlant.",
-  "Rien ne sert de courir vers la lumière. La lumière, à ta vitesse elle vient.",
-];
+let sens = 'fr-minion';
 
-function choisirReponse(question) {
-  let empreinte = 0;
-  for (const caractere of question) {
-    empreinte = (empreinte * 31 + caractere.codePointAt(0)) % 997;
-  }
-  return REPONSES[empreinte % REPONSES.length];
+function appliquerSens() {
+  const reglages = TEXTES[sens];
+
+  sensTexteEl.textContent = reglages.bouton;
+  sensEl.setAttribute('aria-label', reglages.aria);
+  inputEl.placeholder = reglages.exemple;
+
+  bulle.set(reglages.accueil);
+  echoEl.hidden = true;
 }
 
-/* ------------------------------------------------------------ Faux flux de tokens
-   Découpe le texte en petits morceaux et les livre un par un, avec un délai
-   irrégulier : c'est exactement le rythme d'un vrai flux.                   */
+sensEl.addEventListener('click', () => {
+  if (occupe) return;
 
-async function fluxSimule(texte, surToken) {
-  // On garde les espaces avec le mot qui précède, pour ne pas les perdre.
-  const morceaux = texte.match(/\S+\s*|\s+/g) ?? [texte];
-
-  for (const morceau of morceaux) {
-    await attendre(26 + Math.random() * 48);
-    surToken(morceau);
-  }
-}
+  sens = sens === 'fr-minion' ? 'minion-fr' : 'fr-minion';
+  inputEl.value = '';
+  appliquerSens();
+  inputEl.focus();
+});
 
 /* -------------------------------------------------------------- La conversation */
-
 let occupe = false;
 
-async function demander(question) {
+function verrouiller(actif) {
+  inputEl.disabled = actif;
+  sendEl.disabled = actif;
+  sensEl.disabled = actif;
+
+  if (!actif) inputEl.focus();
+}
+
+async function demander(texte) {
   if (occupe) return;
   occupe = true;
 
-  echoEl.textContent = `Toi — ${question}`;
+  echoEl.textContent = `Toi — ${texte}`;
   echoEl.hidden = false;
 
   document.body.classList.add('is-thinking');
-  inputEl.disabled = true;
-  sendEl.disabled = true;
+  verrouiller(true);
   bulle.set('…');
 
-  // Le temps qu'un modèle réfléchisse, grossièrement.
-  await attendre(420 + Math.random() * 320);
+  try {
+    console.log('Envoi requête:', texte, sens);
+    const reponse = await fetch('/api/traduire', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ texte, sens }),
+    });
+    console.log('Réponse:', reponse.status);
 
-  const reponse = choisirReponse(question);
+    if (!reponse.ok) throw new Error(`HTTP ${reponse.status}`);
 
-  document.body.classList.remove('is-thinking');
+    const traduction = await reponse.text();
+    console.log('Traduction:', traduction);
 
-  bulle.start();
-  yoda.startTalking();
+    document.body.classList.remove('is-thinking');
+    bulle.start();
+    minion.startTalking();
+    // Uniquement pendant la réponse - bras levés
+    minionEl.classList.add('is-answering');
 
-  await fluxSimule(reponse, (morceau) => {
-    bulle.append(morceau);
-    yoda.onToken();
-  });
+    const morceaux = traduction.match(/\S+\s*|\s+/g) ?? [traduction];
 
-  yoda.stopTalking();
-  bulle.finish();
+    for (const morceau of morceaux) {
+      await attendre(24 + Math.random() * 36);
+      bulle.append(morceau);
+      minion.onToken();
+    }
 
-  occupe = false;
-  inputEl.disabled = false;
-  sendEl.disabled = false;
-  inputEl.focus();
+    bulle.finish();
+  } catch (erreur) {
+    bulle.set('Bello ?! Quelque chose a cassé. Réessaie, tu peux.');
+    console.error(erreur);
+  } finally {
+    document.body.classList.remove('is-thinking');
+    minionEl.classList.remove('is-answering');
+    minion.stopTalking();
+    occupe = false;
+    verrouiller(false);
+  }
 }
 
 formEl.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const question = inputEl.value.trim();
-  if (!question) {
+  const texte = inputEl.value.trim();
+  if (!texte) {
     inputEl.focus();
     return;
   }
 
   inputEl.value = '';
-  demander(question);
+  demander(texte);
 });
 
-/* ============================================================================
-   À BRANCHER PLUS TARD — le vrai modèle
-   ----------------------------------------------------------------------------
-   Le contrat ne change pas : à chaque token reçu, on ajoute le texte à la
-   bulle et on appelle `yoda.onToken()`.
-
-   async function demander(question) {
-     if (occupe) return;
-     occupe = true;
-
-     echoEl.textContent = `Toi — ${question}`;
-     echoEl.hidden = false;
-
-     document.body.classList.add('is-thinking');
-     inputEl.disabled = true;
-     sendEl.disabled = true;
-     bulle.set('…');
-
-     try {
-       const reponse = await fetch('/api/chat', {
-         method: 'POST',
-         headers: { 'Content-Type': 'application/json' },
-         body: JSON.stringify({ question }),
-       });
-
-       if (!reponse.ok) throw new Error(`HTTP ${reponse.status}`);
-
-       document.body.classList.remove('is-thinking');
-       bulle.start();
-       yoda.startTalking();
-
-       const lecteur = reponse.body.getReader();
-       const decodeur = new TextDecoder();
-
-       while (true) {
-         const { value, done } = await lecteur.read();
-         if (done) break;
-
-         const morceau = decodeur.decode(value, { stream: true });
-         bulle.append(morceau);
-         yoda.onToken();          // ← la bouche bouge à chaque token
-       }
-
-       bulle.finish();
-     } catch (erreur) {
-       bulle.set("La Force, troublée elle est. Réessayer, tu dois.");
-       console.error(erreur);
-     } finally {
-       document.body.classList.remove('is-thinking');
-       yoda.stopTalking();
-       occupe = false;
-       inputEl.disabled = false;
-       sendEl.disabled = false;
-       inputEl.focus();
-     }
-   }
-   ========================================================================== */
+appliquerSens();

@@ -4,77 +4,86 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark" />
-  <title>Yoda</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Traducteur minion</title>
+  <link rel="stylesheet" href="style.css?v=2" />
 </head>
 <body>
   <main class="scene">
 
-    <!-- Petites lucioles, purement décoratives -->
+    <!-- Petites lueurs, purement décoratives -->
     <div class="lucioles" aria-hidden="true">
       <i></i><i></i><i></i><i></i><i></i>
     </div>
 
-    <!-- La question posée, rappelée discrètement -->
+    <!-- Le texte d'origine, rappelé discrètement -->
     <p class="echo" id="echo" hidden></p>
 
-    <!-- La bulle : c'est ici que le texte du modèle s'affiche -->
+    <!-- La bulle : c'est ici que la traduction s'affiche -->
     <section class="bulle" id="bulle" data-state="idle" aria-live="polite">
-      <p class="bulle__texte" id="bulle-texte">Poser ta question, tu peux. Écouter, je saurai.</p>
+      <p class="bulle__texte" id="bulle-texte">Bello ! Écris en français, et en minion je te le dis !</p>
     </section>
 
     <!-- Le personnage. Tout est en CSS, aucune image. -->
     <div
-      class="yoda"
-      id="yoda"
+      class="minion"
+      id="minion"
       role="button"
       tabindex="0"
-      aria-label="Yoda — clique pour le faire réagir"
+      aria-label="Minion — clique pour le faire réagir"
       title="Clique-moi, tu peux"
     >
-      <div class="yoda__ears" aria-hidden="true">
-        <span class="ear ear--left"></span>
-        <span class="ear ear--right"></span>
-      </div>
+      <span class="minion__hair" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="minion__arm minion__arm--left" aria-hidden="true"></span>
+      <span class="minion__arm minion__arm--right" aria-hidden="true"></span>
 
-      <div class="yoda__head" aria-hidden="true">
-        <div class="yoda__wrinkles"><i></i><i></i><i></i></div>
+      <div class="minion__body" aria-hidden="true">
+        <div class="minion__strap"></div>
 
-        <span class="brow brow--left"></span>
-        <span class="brow brow--right"></span>
+        <span class="minion__straps" aria-hidden="true"><i></i><i></i></span>
 
-        <div class="eye eye--left"><span class="pupil"></span></div>
-        <div class="eye eye--right"><span class="pupil"></span></div>
+        <div class="minion__goggles">
+          <div class="minion__goggle"><div class="eye"><span class="iris"></span></div></div>
+          <div class="minion__goggle"><div class="eye"><span class="iris"></span></div></div>
+        </div>
 
-        <div class="yoda__nose"></div>
-
-        <div class="yoda__mouth" id="mouth">
+        <div class="minion__mouth" id="mouth">
           <div class="mouth__inner"></div>
+          <div class="mouth__teeth"></div>
           <div class="mouth__tongue"></div>
         </div>
-      </div>
 
-      <div class="yoda__robe" aria-hidden="true"></div>
+        <div class="minion__overalls">
+          <div class="overalls__bib">
+            <div class="overalls__pocket"><span class="overalls__logo">G</span></div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Le sens de traduction -->
+    <button class="sens" id="sens" type="button">
+      <span class="sens__icone" aria-hidden="true">⇄</span>
+      <span class="sens__texte" id="sens-texte">Français → Minion</span>
+    </button>
 
     <!-- La zone de saisie -->
     <form class="ask" id="ask" autocomplete="off">
-      <label class="sr-only" for="question">Ta question</label>
+      <label class="sr-only" for="question">Texte à traduire</label>
       <input
         id="question"
         name="question"
         type="text"
-        placeholder="Que veux-tu savoir ?"
+        placeholder="Bonjour mon ami !"
         maxlength="220"
         autofocus
       />
-      <button type="submit" id="send" aria-label="Envoyer la question">
+      <button type="submit" id="send" aria-label="Traduire">
         <span aria-hidden="true">→</span>
       </button>
     </form>
 
   </main>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>

@@ -2,27 +2,76 @@ from pathlib import Path
 
 import torch
 from torch import nn
+from pathlib import Path
 
-import numpy as np
+from tokenizers import Tokenizer as HFTokenizer
+from tokenizers import decoders, models, pre_tokenizers, trainers
 
-import math
+def choose_device():
+    if torch.cuda.is_available():
+        return torch.device("cuda")
+    if torch.backends.mps.is_available():
+        return torch.device("mps")
+    return torch.device("cpu")
 
-import tiktoken
-import torch
-from torch import nn
+
+from pathlib import Path
+
+from tokenizers import Tokenizer as HFTokenizer
+from tokenizers import decoders, models, pre_tokenizers, trainers
 
 
 class Tokenizer:
-    def __init__(
-        self
-    ) -> None:
-        self.encoder = tiktoken.get_encoding("o200k_base")
+    SPECIAL_TOKENS = [
+        "[PAD]",
+        "[UNK]",
+        "[BOS]",
+        "[EOS]",
+        "[FR_TO_MIN]",
+        "[MIN_TO_FR]",
+        "[SOURCE]",
+        "[TARGET]",
+    ]
 
-    def encode(self, text: str):
-        return self.encoder.encode(text)
+    def __init__(self, tokenizer_path=None):
+        self.encoder = None
 
-    def decode(self, tokens: list[int]):
+        if tokenizer_path is not None:
+            self.encoder = HFTokenizer.from_file(str(tokenizer_path))
+
+    def train(self, texts, vocab_size=1000):
+        self.encoder = HFTokenizer(
+            models.BPE(unk_token="[UNK]")
+        )
+
+        self.encoder.pre_tokenizer = pre_tokenizers.ByteLevel(
+            add_prefix_space=False
+        )
+        self.encoder.decoder = decoders.ByteLevel()
+
+        trainer = trainers.BpeTrainer(
+            vocab_size=vocab_size,
+            special_tokens=self.SPECIAL_TOKENS,
+            initial_alphabet=pre_tokenizers.ByteLevel.alphabet(),
+        )
+
+        self.encoder.train_from_iterator(texts, trainer=trainer)
+
+    def save(self, path):
+        path = Path(path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        self.encoder.save(str(path))
+
+    def encode(self, text):
+        return self.encoder.encode(text).ids
+
+    def decode(self, tokens):
         return self.encoder.decode(tokens)
+
+    @property
+    def vocab_size(self):
+        return self.encoder.get_vocab_size()
+
 
 class Embedding (nn.Module):
     def __init__(self, vocab_size, embedding_dim):
@@ -57,7 +106,7 @@ class HeadAttenion (nn.Module):
         self.Wk = nn.Linear(embedding_dim, head_dim)
         self.Wv = nn.Linear(embedding_dim, head_dim)
 
-    def forward(self, x, y_decode = None, masked = False):
+    def forward(self, x, y_decode = None, masked = False, key_padding_mask = None):
         if y_decode is not None:
             Q = self.Wq(y_decode)
            
@@ -67,11 +116,21 @@ class HeadAttenion (nn.Module):
         K = self.Wk(x)
         V = self.Wv(x)
 
-        scores = torch.matmul(Q, K.transpose(-2, -1)) / torch.sqrt(torch.tensor(Q.size(-1), dtype=torch.float32))
-        if masked: 
-            mask = torch.triu(torch.ones(scores.size(-2), scores.size(-1)), diagonal=1).bool()
-            mask = mask.to(device=scores.device, dtype=torch.bool)
-            scores = scores.masked_fill(mask, float('-inf'))
+        scores = torch.matmul(Q, K.transpose(-2, -1)) / (Q.size(-1) ** 0.5)
+        if masked:
+            seq_len = scores.size(-1)
+            mask = torch.triu(
+                torch.ones(seq_len, seq_len, device=scores.device, dtype=torch.bool),
+                diagonal=1,
+            )
+            scores = scores.masked_fill(mask, float("-inf"))
+
+        if key_padding_mask is not None:
+            padding_mask = key_padding_mask[:, None, :].to(
+                device=scores.device, dtype=torch.bool
+            )
+            scores = scores.masked_fill(padding_mask, float("-inf"))
+        
         attention_weights = torch.softmax(scores, dim=-1)
         output = torch.matmul(attention_weights, V)
         return output
@@ -83,8 +142,8 @@ class MultiHeadAttention (nn.Module):
         self.linear = nn.Linear(embedding_dim, embedding_dim)
 
 
-    def forward(self, x, y_decode = None, masked = False):
-        head_outputs = [head(x, y_decode, masked) for head in self.heads]
+    def forward(self, x, y_decode = None, masked = False, key_padding_mask = None):
+        head_outputs = [head(x, y_decode, masked, key_padding_mask) for head in self.heads]
         concatenated = torch.cat(head_outputs, dim=-1)
         output = self.linear(concatenated)
         return output

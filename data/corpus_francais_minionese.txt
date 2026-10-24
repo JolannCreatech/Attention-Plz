@@ -1,0 +1,2144 @@
+TÂCHE : Français -> Minionese
+SOURCE : Le chat cherche la sortie.
+CIBLE : Da meow-meow looka for da exit-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da meow-meow looka for da exit-o.
+CIBLE : Le chat cherche la sortie.
+
+TÂCHE : Français -> Minionese
+SOURCE : La voiture arrive maintenant.
+CIBLE : Da vroom-vroom come-y now-now.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da vroom-vroom come-y now-now.
+CIBLE : La voiture arrive maintenant.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je suis désolé.
+CIBLE : Me sorri-sorri.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me sorri-sorri.
+CIBLE : Je suis désolé.
+
+TÂCHE : Français -> Minionese
+SOURCE : Mon ami a besoin d'aide.
+CIBLE : Mi amigo need-o help-y.
+
+TÂCHE : Minionese -> Français
+SOURCE : Mi amigo need-o help-y.
+CIBLE : Mon ami a besoin d'aide.
+
+TÂCHE : Français -> Minionese
+SOURCE : Oui, bien sûr !
+CIBLE : Si, bellissimo!
+
+TÂCHE : Minionese -> Français
+SOURCE : Si, bellissimo!
+CIBLE : Oui, bien sûr !
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous cherche la sortie.
+CIBLE : Nos looka for da exit-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos looka for da exit-o.
+CIBLE : Nous cherche la sortie.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le chat veut jouer.
+CIBLE : Da meow-meow wanta papoy.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da meow-meow wanta papoy.
+CIBLE : Le chat veut jouer.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je mange une banane.
+CIBLE : Me nom-nom one banana.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me nom-nom one banana.
+CIBLE : Je mange une banane.
+
+TÂCHE : Français -> Minionese
+SOURCE : Pourquoi tu ris ?
+CIBLE : Poka tu hahaha?
+
+TÂCHE : Minionese -> Français
+SOURCE : Poka tu hahaha?
+CIBLE : Pourquoi tu ris ?
+
+TÂCHE : Français -> Minionese
+SOURCE : Mon ami écoute la musique.
+CIBLE : Mi amigo listen-o da la-la.
+
+TÂCHE : Minionese -> Français
+SOURCE : Mi amigo listen-o da la-la.
+CIBLE : Mon ami écoute la musique.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu arrive maintenant.
+CIBLE : Tu come-y now-now.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu come-y now-now.
+CIBLE : Tu arrive maintenant.
+
+TÂCHE : Français -> Minionese
+SOURCE : C'est mon tour !
+CIBLE : Dis es mi turn-o!
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis es mi turn-o!
+CIBLE : C'est mon tour !
+
+TÂCHE : Français -> Minionese
+SOURCE : La voiture répare le vélo.
+CIBLE : Da vroom-vroom fix-o da bike-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da vroom-vroom fix-o da bike-o.
+CIBLE : La voiture répare le vélo.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le robot mange une banane.
+CIBLE : Da robo-bot nom-nom one banana.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da robo-bot nom-nom one banana.
+CIBLE : Le robot mange une banane.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je ne suis pas d'accord.
+CIBLE : Me no agree-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me no agree-o.
+CIBLE : Je ne suis pas d'accord.
+
+TÂCHE : Français -> Minionese
+SOURCE : Respire profondément.
+CIBLE : Breathe-o big-big.
+
+TÂCHE : Minionese -> Français
+SOURCE : Breathe-o big-big.
+CIBLE : Respire profondément.
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous écoute la musique.
+CIBLE : Nos listen-o da la-la.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos listen-o da la-la.
+CIBLE : Nous écoute la musique.
+
+TÂCHE : Français -> Minionese
+SOURCE : La voiture danse avec nous.
+CIBLE : Da vroom-vroom tulaliloo con nos.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da vroom-vroom tulaliloo con nos.
+CIBLE : La voiture danse avec nous.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je veut jouer.
+CIBLE : Me wanta papoy.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me wanta papoy.
+CIBLE : Je veut jouer.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le chat arrive maintenant.
+CIBLE : Da meow-meow come-y now-now.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da meow-meow come-y now-now.
+CIBLE : Le chat arrive maintenant.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je arrive maintenant.
+CIBLE : Me come-y now-now.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me come-y now-now.
+CIBLE : Je arrive maintenant.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le repas est prêt.
+CIBLE : Da food-o es ready-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da food-o es ready-o.
+CIBLE : Le repas est prêt.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le robot dort ici.
+CIBLE : Da robo-bot zzz here-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da robo-bot zzz here-o.
+CIBLE : Le robot dort ici.
+
+TÂCHE : Français -> Minionese
+SOURCE : Qui veut de la pizza ?
+CIBLE : Kwi wanta pitsa?
+
+TÂCHE : Minionese -> Français
+SOURCE : Kwi wanta pitsa?
+CIBLE : Qui veut de la pizza ?
+
+TÂCHE : Français -> Minionese
+SOURCE : Il fait froid.
+CIBLE : Brrr, es cold-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Brrr, es cold-o.
+CIBLE : Il fait froid.
+
+TÂCHE : Français -> Minionese
+SOURCE : Joyeux anniversaire !
+CIBLE : Happy birfday! Ta-da-bello!
+
+TÂCHE : Minionese -> Français
+SOURCE : Happy birfday! Ta-da-bello!
+CIBLE : Joyeux anniversaire !
+
+TÂCHE : Français -> Minionese
+SOURCE : Bon appétit !
+CIBLE : Happy nom-nom!
+
+TÂCHE : Minionese -> Français
+SOURCE : Happy nom-nom!
+CIBLE : Bon appétit !
+
+TÂCHE : Français -> Minionese
+SOURCE : La porte est fermée.
+CIBLE : Da door-o es close-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da door-o es close-o.
+CIBLE : La porte est fermée.
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous mange une banane.
+CIBLE : Nos nom-nom one banana.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos nom-nom one banana.
+CIBLE : Nous mange une banane.
+
+TÂCHE : Français -> Minionese
+SOURCE : Faisons une pause.
+CIBLE : Nos do break-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos do break-o.
+CIBLE : Faisons une pause.
+
+TÂCHE : Français -> Minionese
+SOURCE : Bonne nuit.
+CIBLE : Good night-o, zzz.
+
+TÂCHE : Minionese -> Français
+SOURCE : Good night-o, zzz.
+CIBLE : Bonne nuit.
+
+TÂCHE : Français -> Minionese
+SOURCE : Merci beaucoup.
+CIBLE : Tank yu, mucha.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tank yu, mucha.
+CIBLE : Merci beaucoup.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je sais !
+CIBLE : Me know-o!
+
+TÂCHE : Minionese -> Français
+SOURCE : Me know-o!
+CIBLE : Je sais !
+
+TÂCHE : Français -> Minionese
+SOURCE : Choisis la banane.
+CIBLE : Choose-o da banana.
+
+TÂCHE : Minionese -> Français
+SOURCE : Choose-o da banana.
+CIBLE : Choisis la banane.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le robot arrive maintenant.
+CIBLE : Da robo-bot come-y now-now.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da robo-bot come-y now-now.
+CIBLE : Le robot arrive maintenant.
+
+TÂCHE : Français -> Minionese
+SOURCE : La voiture cherche la sortie.
+CIBLE : Da vroom-vroom looka for da exit-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da vroom-vroom looka for da exit-o.
+CIBLE : La voiture cherche la sortie.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le robot cherche la sortie.
+CIBLE : Da robo-bot looka for da exit-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da robo-bot looka for da exit-o.
+CIBLE : Le robot cherche la sortie.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le robot danse avec nous.
+CIBLE : Da robo-bot tulaliloo con nos.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da robo-bot tulaliloo con nos.
+CIBLE : Le robot danse avec nous.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je voudrais un verre d'eau.
+CIBLE : Me wanta one glass-o agua.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me wanta one glass-o agua.
+CIBLE : Je voudrais un verre d'eau.
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous arrive maintenant.
+CIBLE : Nos come-y now-now.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos come-y now-now.
+CIBLE : Nous arrive maintenant.
+
+TÂCHE : Français -> Minionese
+SOURCE : S'il te plaît, aide-moi.
+CIBLE : Pliz, help-y me.
+
+TÂCHE : Minionese -> Français
+SOURCE : Pliz, help-y me.
+CIBLE : S'il te plaît, aide-moi.
+
+TÂCHE : Français -> Minionese
+SOURCE : Partage avec tes amis.
+CIBLE : Share-o con ti amigos.
+
+TÂCHE : Minionese -> Français
+SOURCE : Share-o con ti amigos.
+CIBLE : Partage avec tes amis.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le chat répare le vélo.
+CIBLE : Da meow-meow fix-o da bike-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da meow-meow fix-o da bike-o.
+CIBLE : Le chat répare le vélo.
+
+TÂCHE : Français -> Minionese
+SOURCE : C'était amusant.
+CIBLE : Dat es haha-funny.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dat es haha-funny.
+CIBLE : C'était amusant.
+
+TÂCHE : Français -> Minionese
+SOURCE : Arrête, s'il te plaît.
+CIBLE : Stop-o, pliz.
+
+TÂCHE : Minionese -> Français
+SOURCE : Stop-o, pliz.
+CIBLE : Arrête, s'il te plaît.
+
+TÂCHE : Français -> Minionese
+SOURCE : Enregistre le fichier.
+CIBLE : Save-o da file-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Save-o da file-o.
+CIBLE : Enregistre le fichier.
+
+TÂCHE : Français -> Minionese
+SOURCE : C'est possible.
+CIBLE : Dis es poka-can.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis es poka-can.
+CIBLE : C'est possible.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je est prêt.
+CIBLE : Me es ready-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me es ready-o.
+CIBLE : Je est prêt.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je suis en vacances.
+CIBLE : Me es on vacay-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me es on vacay-o.
+CIBLE : Je suis en vacances.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le bébé dort.
+CIBLE : Da bebi es zzz.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da bebi es zzz.
+CIBLE : Le bébé dort.
+
+TÂCHE : Français -> Minionese
+SOURCE : On peut le faire ensemble.
+CIBLE : Nos poka-can do dis together-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos poka-can do dis together-o.
+CIBLE : On peut le faire ensemble.
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous veut jouer.
+CIBLE : Nos wanta papoy.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos wanta papoy.
+CIBLE : Nous veut jouer.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je t'aime.
+CIBLE : Me luv tu.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me luv tu.
+CIBLE : Je t'aime.
+
+TÂCHE : Français -> Minionese
+SOURCE : C'est impossible.
+CIBLE : Dis es no poka-can.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis es no poka-can.
+CIBLE : C'est impossible.
+
+TÂCHE : Français -> Minionese
+SOURCE : La voiture est prêt.
+CIBLE : Da vroom-vroom es ready-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da vroom-vroom es ready-o.
+CIBLE : La voiture est prêt.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu as raison.
+CIBLE : Tu es right-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu es right-o.
+CIBLE : Tu as raison.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je ne comprends pas.
+CIBLE : Me no understand-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me no understand-o.
+CIBLE : Je ne comprends pas.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je suis perdu.
+CIBLE : Me lost-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me lost-o.
+CIBLE : Je suis perdu.
+
+TÂCHE : Français -> Minionese
+SOURCE : J'ai besoin de repos.
+CIBLE : Me need-o zzz.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me need-o zzz.
+CIBLE : J'ai besoin de repos.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu veux jouer avec moi ?
+CIBLE : Tu wanta papoy con me?
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu wanta papoy con me?
+CIBLE : Tu veux jouer avec moi ?
+
+TÂCHE : Français -> Minionese
+SOURCE : Ce n'est pas une blague.
+CIBLE : Dis es no joke-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis es no joke-o.
+CIBLE : Ce n'est pas une blague.
+
+TÂCHE : Français -> Minionese
+SOURCE : Pas de problème.
+CIBLE : No problema-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : No problema-o.
+CIBLE : Pas de problème.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je dort ici.
+CIBLE : Me zzz here-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me zzz here-o.
+CIBLE : Je dort ici.
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous avons raté le bus.
+CIBLE : Nos miss-o da bus-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos miss-o da bus-o.
+CIBLE : Nous avons raté le bus.
+
+TÂCHE : Français -> Minionese
+SOURCE : La pizza est très bonne.
+CIBLE : Da pitsa es bellissimo, mucha.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da pitsa es bellissimo, mucha.
+CIBLE : La pizza est très bonne.
+
+TÂCHE : Français -> Minionese
+SOURCE : Dépêche-toi !
+CIBLE : Bap-bap, tu!
+
+TÂCHE : Minionese -> Français
+SOURCE : Bap-bap, tu!
+CIBLE : Dépêche-toi !
+
+TÂCHE : Français -> Minionese
+SOURCE : Lance le programme.
+CIBLE : Start-o da program-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Start-o da program-o.
+CIBLE : Lance le programme.
+
+TÂCHE : Français -> Minionese
+SOURCE : Ne le dis à personne.
+CIBLE : No tell-o nobody-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : No tell-o nobody-o.
+CIBLE : Ne le dis à personne.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le film commence.
+CIBLE : Da movie-o start-y.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da movie-o start-y.
+CIBLE : Le film commence.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu danse avec nous.
+CIBLE : Tu tulaliloo con nos.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu tulaliloo con nos.
+CIBLE : Tu danse avec nous.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tout ira bien.
+CIBLE : All go-y bueno-bello.
+
+TÂCHE : Minionese -> Français
+SOURCE : All go-y bueno-bello.
+CIBLE : Tout ira bien.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je suis très heureux.
+CIBLE : Me es hahaha-joy, mucha!
+
+TÂCHE : Minionese -> Français
+SOURCE : Me es hahaha-joy, mucha!
+CIBLE : Je suis très heureux.
+
+TÂCHE : Français -> Minionese
+SOURCE : Pas de bananes aujourd'hui.
+CIBLE : No banana today-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : No banana today-o.
+CIBLE : Pas de bananes aujourd'hui.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le robot veut jouer.
+CIBLE : Da robo-bot wanta papoy.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da robo-bot wanta papoy.
+CIBLE : Le robot veut jouer.
+
+TÂCHE : Français -> Minionese
+SOURCE : Qu'est-ce que c'est ?
+CIBLE : Kwa es dis?
+
+TÂCHE : Minionese -> Français
+SOURCE : Kwa es dis?
+CIBLE : Qu'est-ce que c'est ?
+
+TÂCHE : Français -> Minionese
+SOURCE : Voici un cadeau pour toi.
+CIBLE : Here-o, present-o for tu.
+
+TÂCHE : Minionese -> Français
+SOURCE : Here-o, present-o for tu.
+CIBLE : Voici un cadeau pour toi.
+
+TÂCHE : Français -> Minionese
+SOURCE : Peut-être demain.
+CIBLE : Maybe tomoro.
+
+TÂCHE : Minionese -> Français
+SOURCE : Maybe tomoro.
+CIBLE : Peut-être demain.
+
+TÂCHE : Français -> Minionese
+SOURCE : On se retrouve demain.
+CIBLE : Nos meet-y tomoro.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos meet-y tomoro.
+CIBLE : On se retrouve demain.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je ne sais pas.
+CIBLE : Me no know-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me no know-o.
+CIBLE : Je ne sais pas.
+
+TÂCHE : Français -> Minionese
+SOURCE : Au revoir et à bientôt !
+CIBLE : Poopaye e see-y encora!
+
+TÂCHE : Minionese -> Français
+SOURCE : Poopaye e see-y encora!
+CIBLE : Au revoir et à bientôt !
+
+TÂCHE : Français -> Minionese
+SOURCE : La lumière est trop forte.
+CIBLE : Da light-o es too strong-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da light-o es too strong-o.
+CIBLE : La lumière est trop forte.
+
+TÂCHE : Français -> Minionese
+SOURCE : Prends une autre photo.
+CIBLE : Take-o another photo-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Take-o another photo-o.
+CIBLE : Prends une autre photo.
+
+TÂCHE : Français -> Minionese
+SOURCE : C'est à moi.
+CIBLE : Dis es for me.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis es for me.
+CIBLE : C'est à moi.
+
+TÂCHE : Français -> Minionese
+SOURCE : Fais un câlin à ton ami.
+CIBLE : Give-o hug-y to ti amigo.
+
+TÂCHE : Minionese -> Français
+SOURCE : Give-o hug-y to ti amigo.
+CIBLE : Fais un câlin à ton ami.
+
+TÂCHE : Français -> Minionese
+SOURCE : C'est différent.
+CIBLE : Dis es differente-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis es differente-o.
+CIBLE : C'est différent.
+
+TÂCHE : Français -> Minionese
+SOURCE : Fin de la mission.
+CIBLE : Da mission-o es fini-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da mission-o es fini-o.
+CIBLE : Fin de la mission.
+
+TÂCHE : Français -> Minionese
+SOURCE : Ce n'était pas volontaire.
+CIBLE : Me no do it-o on purpose-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me no do it-o on purpose-o.
+CIBLE : Ce n'était pas volontaire.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le chat écoute la musique.
+CIBLE : Da meow-meow listen-o da la-la.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da meow-meow listen-o da la-la.
+CIBLE : Le chat écoute la musique.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le chien court dans le jardin.
+CIBLE : Da woof-woof bap-bap in-da garden-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da woof-woof bap-bap in-da garden-o.
+CIBLE : Le chien court dans le jardin.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu n'es pas seul.
+CIBLE : Tu no alone-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu no alone-o.
+CIBLE : Tu n'es pas seul.
+
+TÂCHE : Français -> Minionese
+SOURCE : C'est à toi.
+CIBLE : Dis es for tu.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis es for tu.
+CIBLE : C'est à toi.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tourne à droite.
+CIBLE : Turn-o right-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Turn-o right-o.
+CIBLE : Tourne à droite.
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous devons tester le robot.
+CIBLE : Nos must test-o da robo-bot.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos must test-o da robo-bot.
+CIBLE : Nous devons tester le robot.
+
+TÂCHE : Français -> Minionese
+SOURCE : La maison est grande.
+CIBLE : Da domo es grande-bap.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da domo es grande-bap.
+CIBLE : La maison est grande.
+
+TÂCHE : Français -> Minionese
+SOURCE : C'est mon film préféré.
+CIBLE : Dis es mi favorite movie-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis es mi favorite movie-o.
+CIBLE : C'est mon film préféré.
+
+TÂCHE : Français -> Minionese
+SOURCE : J'ai soif. Je veux de l'eau.
+CIBLE : Me glou-glou. Me wanta agua.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me glou-glou. Me wanta agua.
+CIBLE : J'ai soif. Je veux de l'eau.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le train part bientôt.
+CIBLE : Da train-o go soon-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da train-o go soon-o.
+CIBLE : Le train part bientôt.
+
+TÂCHE : Français -> Minionese
+SOURCE : Ouvre la porte, s'il te plaît.
+CIBLE : Open-o da door-o, pliz.
+
+TÂCHE : Minionese -> Français
+SOURCE : Open-o da door-o, pliz.
+CIBLE : Ouvre la porte, s'il te plaît.
+
+TÂCHE : Français -> Minionese
+SOURCE : Ne cours pas ici.
+CIBLE : No bap-bap here-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : No bap-bap here-o.
+CIBLE : Ne cours pas ici.
+
+TÂCHE : Français -> Minionese
+SOURCE : La porte est ouverte.
+CIBLE : Da door-o es open-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da door-o es open-o.
+CIBLE : La porte est ouverte.
+
+TÂCHE : Français -> Minionese
+SOURCE : Attention, la voiture arrive !
+CIBLE : Banana-na, da vroom-vroom come-y!
+
+TÂCHE : Minionese -> Français
+SOURCE : Banana-na, da vroom-vroom come-y!
+CIBLE : Attention, la voiture arrive !
+
+TÂCHE : Français -> Minionese
+SOURCE : Le tournevis est sur la table.
+CIBLE : Da screwdriver-o es up-da table-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da screwdriver-o es up-da table-o.
+CIBLE : Le tournevis est sur la table.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le chat mange une banane.
+CIBLE : Da meow-meow nom-nom one banana.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da meow-meow nom-nom one banana.
+CIBLE : Le chat mange une banane.
+
+TÂCHE : Français -> Minionese
+SOURCE : Bonjour !
+CIBLE : Bello!
+
+TÂCHE : Minionese -> Français
+SOURCE : Bello!
+CIBLE : Bonjour !
+
+TÂCHE : Français -> Minionese
+SOURCE : La roue tourne.
+CIBLE : Da wheel-o spin-y.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da wheel-o spin-y.
+CIBLE : La roue tourne.
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous répare le vélo.
+CIBLE : Nos fix-o da bike-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos fix-o da bike-o.
+CIBLE : Nous répare le vélo.
+
+TÂCHE : Français -> Minionese
+SOURCE : Mon ami mange une banane.
+CIBLE : Mi amigo nom-nom one banana.
+
+TÂCHE : Minionese -> Français
+SOURCE : Mi amigo nom-nom one banana.
+CIBLE : Mon ami mange une banane.
+
+TÂCHE : Français -> Minionese
+SOURCE : J'ai perdu mon livre.
+CIBLE : Me lose mi papel.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me lose mi papel.
+CIBLE : J'ai perdu mon livre.
+
+TÂCHE : Français -> Minionese
+SOURCE : Quelle heure est-il ?
+CIBLE : Kwa time-o es it?
+
+TÂCHE : Minionese -> Français
+SOURCE : Kwa time-o es it?
+CIBLE : Quelle heure est-il ?
+
+TÂCHE : Français -> Minionese
+SOURCE : Allume la musique.
+CIBLE : Turn-o on da la-la.
+
+TÂCHE : Minionese -> Français
+SOURCE : Turn-o on da la-la.
+CIBLE : Allume la musique.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le capteur fonctionne.
+CIBLE : Da sensor-o work-y!
+
+TÂCHE : Minionese -> Français
+SOURCE : Da sensor-o work-y!
+CIBLE : Le capteur fonctionne.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le chat a besoin d'aide.
+CIBLE : Da meow-meow need-o help-y.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da meow-meow need-o help-y.
+CIBLE : Le chat a besoin d'aide.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le travail est terminé.
+CIBLE : Da bidi-bidi es fini-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da bidi-bidi es fini-o.
+CIBLE : Le travail est terminé.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu est prêt.
+CIBLE : Tu es ready-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu es ready-o.
+CIBLE : Tu est prêt.
+
+TÂCHE : Français -> Minionese
+SOURCE : Ça ne marche pas encore.
+CIBLE : It no work-y encora.
+
+TÂCHE : Minionese -> Français
+SOURCE : It no work-y encora.
+CIBLE : Ça ne marche pas encore.
+
+TÂCHE : Français -> Minionese
+SOURCE : Aide-nous à trouver le chemin.
+CIBLE : Help-y nos find-o da way-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Help-y nos find-o da way-o.
+CIBLE : Aide-nous à trouver le chemin.
+
+TÂCHE : Français -> Minionese
+SOURCE : J'aime apprendre.
+CIBLE : Me luv learn-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me luv learn-o.
+CIBLE : J'aime apprendre.
+
+TÂCHE : Français -> Minionese
+SOURCE : Ne casse pas ça.
+CIBLE : No break-o dis.
+
+TÂCHE : Minionese -> Français
+SOURCE : No break-o dis.
+CIBLE : Ne casse pas ça.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu mange une banane.
+CIBLE : Tu nom-nom one banana.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu nom-nom one banana.
+CIBLE : Tu mange une banane.
+
+TÂCHE : Français -> Minionese
+SOURCE : Mon ami arrive maintenant.
+CIBLE : Mi amigo come-y now-now.
+
+TÂCHE : Minionese -> Français
+SOURCE : Mi amigo come-y now-now.
+CIBLE : Mon ami arrive maintenant.
+
+TÂCHE : Français -> Minionese
+SOURCE : Mon ami répare le vélo.
+CIBLE : Mi amigo fix-o da bike-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Mi amigo fix-o da bike-o.
+CIBLE : Mon ami répare le vélo.
+
+TÂCHE : Français -> Minionese
+SOURCE : Cette glace est délicieuse.
+CIBLE : Dis gelato es nom-nom bellissimo.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis gelato es nom-nom bellissimo.
+CIBLE : Cette glace est délicieuse.
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous avons réussi !
+CIBLE : Nos did it-o! Bravissimo!
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos did it-o! Bravissimo!
+CIBLE : Nous avons réussi !
+
+TÂCHE : Français -> Minionese
+SOURCE : J'adore les bananes.
+CIBLE : Me luv da bananas, mucha!
+
+TÂCHE : Minionese -> Français
+SOURCE : Me luv da bananas, mucha!
+CIBLE : J'adore les bananes.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je suis en train de cuisiner.
+CIBLE : Me cook-o now-now.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me cook-o now-now.
+CIBLE : Je suis en train de cuisiner.
+
+TÂCHE : Français -> Minionese
+SOURCE : Ne touche pas à ça !
+CIBLE : No touch-o dis, no-no-bap!
+
+TÂCHE : Minionese -> Français
+SOURCE : No touch-o dis, no-no-bap!
+CIBLE : Ne touche pas à ça !
+
+TÂCHE : Français -> Minionese
+SOURCE : Reste encore un peu.
+CIBLE : Stay-y encora mini-mini.
+
+TÂCHE : Minionese -> Français
+SOURCE : Stay-y encora mini-mini.
+CIBLE : Reste encore un peu.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le café est trop chaud.
+CIBLE : Da ka-fe es hot-o, mucha.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da ka-fe es hot-o, mucha.
+CIBLE : Le café est trop chaud.
+
+TÂCHE : Français -> Minionese
+SOURCE : J'aime réparer les choses.
+CIBLE : Me luv fix-o things-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me luv fix-o things-o.
+CIBLE : J'aime réparer les choses.
+
+TÂCHE : Français -> Minionese
+SOURCE : J'ai trouvé les clés !
+CIBLE : Me found-o da keys-o!
+
+TÂCHE : Minionese -> Français
+SOURCE : Me found-o da keys-o!
+CIBLE : J'ai trouvé les clés !
+
+TÂCHE : Français -> Minionese
+SOURCE : Je danse avec nous.
+CIBLE : Me tulaliloo con nos.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me tulaliloo con nos.
+CIBLE : Je danse avec nous.
+
+TÂCHE : Français -> Minionese
+SOURCE : Mon ami dort ici.
+CIBLE : Mi amigo zzz here-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Mi amigo zzz here-o.
+CIBLE : Mon ami dort ici.
+
+TÂCHE : Français -> Minionese
+SOURCE : Mon ami danse avec nous.
+CIBLE : Mi amigo tulaliloo con nos.
+
+TÂCHE : Minionese -> Français
+SOURCE : Mi amigo tulaliloo con nos.
+CIBLE : Mon ami danse avec nous.
+
+TÂCHE : Français -> Minionese
+SOURCE : Mon ami veut jouer.
+CIBLE : Mi amigo wanta papoy.
+
+TÂCHE : Minionese -> Français
+SOURCE : Mi amigo wanta papoy.
+CIBLE : Mon ami veut jouer.
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous allons à la fête.
+CIBLE : Nos go to da par-tay.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos go to da par-tay.
+CIBLE : Nous allons à la fête.
+
+TÂCHE : Français -> Minionese
+SOURCE : La voiture écoute la musique.
+CIBLE : Da vroom-vroom listen-o da la-la.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da vroom-vroom listen-o da la-la.
+CIBLE : La voiture écoute la musique.
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous danse avec nous.
+CIBLE : Nos tulaliloo con nos.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos tulaliloo con nos.
+CIBLE : Nous danse avec nous.
+
+TÂCHE : Français -> Minionese
+SOURCE : Écoute bien.
+CIBLE : Listen-o good-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Listen-o good-o.
+CIBLE : Écoute bien.
+
+TÂCHE : Français -> Minionese
+SOURCE : J'ai besoin d'aide.
+CIBLE : Me need-o help-y.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me need-o help-y.
+CIBLE : J'ai besoin d'aide.
+
+TÂCHE : Français -> Minionese
+SOURCE : Réveille-toi !
+CIBLE : Wake-y up-da!
+
+TÂCHE : Minionese -> Français
+SOURCE : Wake-y up-da!
+CIBLE : Réveille-toi !
+
+TÂCHE : Français -> Minionese
+SOURCE : Le robot répare le vélo.
+CIBLE : Da robo-bot fix-o da bike-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da robo-bot fix-o da bike-o.
+CIBLE : Le robot répare le vélo.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je a besoin d'aide.
+CIBLE : Me need-o help-y.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me need-o help-y.
+CIBLE : Je a besoin d'aide.
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous est prêt.
+CIBLE : Nos es ready-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos es ready-o.
+CIBLE : Nous est prêt.
+
+TÂCHE : Français -> Minionese
+SOURCE : Quelle catastrophe !
+CIBLE : Oh no-no-bap!
+
+TÂCHE : Minionese -> Français
+SOURCE : Oh no-no-bap!
+CIBLE : Quelle catastrophe !
+
+TÂCHE : Français -> Minionese
+SOURCE : Il est trop tôt.
+CIBLE : Es too early-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Es too early-o.
+CIBLE : Il est trop tôt.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu dort ici.
+CIBLE : Tu zzz here-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu zzz here-o.
+CIBLE : Tu dort ici.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le chat est prêt.
+CIBLE : Da meow-meow es ready-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da meow-meow es ready-o.
+CIBLE : Le chat est prêt.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je cherche la sortie.
+CIBLE : Me looka for da exit-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me looka for da exit-o.
+CIBLE : Je cherche la sortie.
+
+TÂCHE : Français -> Minionese
+SOURCE : L'ordinateur ne fonctionne pas.
+CIBLE : Da bidi-box no work-y.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da bidi-box no work-y.
+CIBLE : L'ordinateur ne fonctionne pas.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu répare le vélo.
+CIBLE : Tu fix-o da bike-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu fix-o da bike-o.
+CIBLE : Tu répare le vélo.
+
+TÂCHE : Français -> Minionese
+SOURCE : Mon téléphone sonne.
+CIBLE : Mi ring-ring ring-ring!
+
+TÂCHE : Minionese -> Français
+SOURCE : Mi ring-ring ring-ring!
+CIBLE : Mon téléphone sonne.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu a besoin d'aide.
+CIBLE : Tu need-o help-y.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu need-o help-y.
+CIBLE : Tu a besoin d'aide.
+
+TÂCHE : Français -> Minionese
+SOURCE : Prends ton sac.
+CIBLE : Take-o ti bag-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Take-o ti bag-o.
+CIBLE : Prends ton sac.
+
+TÂCHE : Français -> Minionese
+SOURCE : Regarde devant toi.
+CIBLE : Looka front-o, tu.
+
+TÂCHE : Minionese -> Français
+SOURCE : Looka front-o, tu.
+CIBLE : Regarde devant toi.
+
+TÂCHE : Français -> Minionese
+SOURCE : Essayons autrement.
+CIBLE : Nos try-o another-way-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos try-o another-way-o.
+CIBLE : Essayons autrement.
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous devons recommencer.
+CIBLE : Nos must start-o encora.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos must start-o encora.
+CIBLE : Nous devons recommencer.
+
+TÂCHE : Français -> Minionese
+SOURCE : On se voit bientôt.
+CIBLE : Nos see-y soon-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos see-y soon-o.
+CIBLE : On se voit bientôt.
+
+TÂCHE : Français -> Minionese
+SOURCE : Excellente idée !
+CIBLE : Idea-o bellissimo!
+
+TÂCHE : Minionese -> Français
+SOURCE : Idea-o bellissimo!
+CIBLE : Excellente idée !
+
+TÂCHE : Français -> Minionese
+SOURCE : La voiture mange une banane.
+CIBLE : Da vroom-vroom nom-nom one banana.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da vroom-vroom nom-nom one banana.
+CIBLE : La voiture mange une banane.
+
+TÂCHE : Français -> Minionese
+SOURCE : Prends la plus petite.
+CIBLE : Take-o da mini-mini one.
+
+TÂCHE : Minionese -> Français
+SOURCE : Take-o da mini-mini one.
+CIBLE : Prends la plus petite.
+
+TÂCHE : Français -> Minionese
+SOURCE : N'oublie pas ton manteau.
+CIBLE : No forget-o ti coat-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : No forget-o ti coat-o.
+CIBLE : N'oublie pas ton manteau.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le projet est presque fini.
+CIBLE : Da project-o es almost fini-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da project-o es almost fini-o.
+CIBLE : Le projet est presque fini.
+
+TÂCHE : Français -> Minionese
+SOURCE : Où est la banane ?
+CIBLE : Woo es da banana?
+
+TÂCHE : Minionese -> Français
+SOURCE : Woo es da banana?
+CIBLE : Où est la banane ?
+
+TÂCHE : Français -> Minionese
+SOURCE : Recommençons demain.
+CIBLE : Nos start-o encora tomoro.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos start-o encora tomoro.
+CIBLE : Recommençons demain.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je suis fatigué, je vais dormir.
+CIBLE : Me zzz-bello, me go zzz.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me zzz-bello, me go zzz.
+CIBLE : Je suis fatigué, je vais dormir.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le signal est faible.
+CIBLE : Da signal-o es mini-mini.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da signal-o es mini-mini.
+CIBLE : Le signal est faible.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le robot a besoin d'aide.
+CIBLE : Da robo-bot need-o help-y.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da robo-bot need-o help-y.
+CIBLE : Le robot a besoin d'aide.
+
+TÂCHE : Français -> Minionese
+SOURCE : Installe-toi.
+CIBLE : Sit-o, relax-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Sit-o, relax-o.
+CIBLE : Installe-toi.
+
+TÂCHE : Français -> Minionese
+SOURCE : Attention aux doigts.
+CIBLE : Banana-na, ti fingers-o!
+
+TÂCHE : Minionese -> Français
+SOURCE : Banana-na, ti fingers-o!
+CIBLE : Attention aux doigts.
+
+TÂCHE : Français -> Minionese
+SOURCE : Il fait beau.
+CIBLE : Sun-sun, bellissimo!
+
+TÂCHE : Minionese -> Français
+SOURCE : Sun-sun, bellissimo!
+CIBLE : Il fait beau.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je suis là pour toi.
+CIBLE : Me es here-o for tu.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me es here-o for tu.
+CIBLE : Je suis là pour toi.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je préfère le chocolat.
+CIBLE : Me prefer-o chocolate-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me prefer-o chocolate-o.
+CIBLE : Je préfère le chocolat.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je plaisante !
+CIBLE : Me joke-o! Haha-funny!
+
+TÂCHE : Minionese -> Français
+SOURCE : Me joke-o! Haha-funny!
+CIBLE : Je plaisante !
+
+TÂCHE : Français -> Minionese
+SOURCE : C'est interdit.
+CIBLE : No allowed-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : No allowed-o.
+CIBLE : C'est interdit.
+
+TÂCHE : Français -> Minionese
+SOURCE : Fais-moi confiance.
+CIBLE : Trust-o me, amigo.
+
+TÂCHE : Minionese -> Français
+SOURCE : Trust-o me, amigo.
+CIBLE : Fais-moi confiance.
+
+TÂCHE : Français -> Minionese
+SOURCE : C'est vraiment drôle.
+CIBLE : Dis es haha-funny, mucha.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis es haha-funny, mucha.
+CIBLE : C'est vraiment drôle.
+
+TÂCHE : Français -> Minionese
+SOURCE : Calme-toi.
+CIBLE : Easy-o, amigo.
+
+TÂCHE : Minionese -> Français
+SOURCE : Easy-o, amigo.
+CIBLE : Calme-toi.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je comprends maintenant.
+CIBLE : Me understand-o now-now.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me understand-o now-now.
+CIBLE : Je comprends maintenant.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le chat dort sur le canapé.
+CIBLE : Da meow-meow zzz up-da sofa-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da meow-meow zzz up-da sofa-o.
+CIBLE : Le chat dort sur le canapé.
+
+TÂCHE : Français -> Minionese
+SOURCE : C'est fragile.
+CIBLE : Dis es fragile-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis es fragile-o.
+CIBLE : C'est fragile.
+
+TÂCHE : Français -> Minionese
+SOURCE : Éteins la lumière.
+CIBLE : Turn-o off da light-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Turn-o off da light-o.
+CIBLE : Éteins la lumière.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le robot écoute la musique.
+CIBLE : Da robo-bot listen-o da la-la.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da robo-bot listen-o da la-la.
+CIBLE : Le robot écoute la musique.
+
+TÂCHE : Français -> Minionese
+SOURCE : Il pleut.
+CIBLE : Plip-plop, agua from sky-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Plip-plop, agua from sky-o.
+CIBLE : Il pleut.
+
+TÂCHE : Français -> Minionese
+SOURCE : La photo est floue.
+CIBLE : Da photo-o es blurry-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da photo-o es blurry-o.
+CIBLE : La photo est floue.
+
+TÂCHE : Français -> Minionese
+SOURCE : J'ai une idée !
+CIBLE : Me got one idea-o!
+
+TÂCHE : Minionese -> Français
+SOURCE : Me got one idea-o!
+CIBLE : J'ai une idée !
+
+TÂCHE : Français -> Minionese
+SOURCE : N'abandonne pas !
+CIBLE : No give-up-o!
+
+TÂCHE : Minionese -> Français
+SOURCE : No give-up-o!
+CIBLE : N'abandonne pas !
+
+TÂCHE : Français -> Minionese
+SOURCE : Quelle belle journée !
+CIBLE : Kwa bellissimo day-o!
+
+TÂCHE : Minionese -> Français
+SOURCE : Kwa bellissimo day-o!
+CIBLE : Quelle belle journée !
+
+TÂCHE : Français -> Minionese
+SOURCE : Papa, viens ici !
+CIBLE : Papa, come-y here-o!
+
+TÂCHE : Minionese -> Français
+SOURCE : Papa, come-y here-o!
+CIBLE : Papa, viens ici !
+
+TÂCHE : Français -> Minionese
+SOURCE : Bon courage !
+CIBLE : Bap-bap, amigo!
+
+TÂCHE : Minionese -> Français
+SOURCE : Bap-bap, amigo!
+CIBLE : Bon courage !
+
+TÂCHE : Français -> Minionese
+SOURCE : Terminé !
+CIBLE : Fini-o!
+
+TÂCHE : Minionese -> Français
+SOURCE : Fini-o!
+CIBLE : Terminé !
+
+TÂCHE : Français -> Minionese
+SOURCE : Continue tout droit.
+CIBLE : Go straight-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Go straight-o.
+CIBLE : Continue tout droit.
+
+TÂCHE : Français -> Minionese
+SOURCE : Mon ami est prêt.
+CIBLE : Mi amigo es ready-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Mi amigo es ready-o.
+CIBLE : Mon ami est prêt.
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous a besoin d'aide.
+CIBLE : Nos need-o help-y.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos need-o help-y.
+CIBLE : Nous a besoin d'aide.
+
+TÂCHE : Français -> Minionese
+SOURCE : Viens avec nous.
+CIBLE : Come-y con nos.
+
+TÂCHE : Minionese -> Français
+SOURCE : Come-y con nos.
+CIBLE : Viens avec nous.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le chat danse avec nous.
+CIBLE : Da meow-meow tulaliloo con nos.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da meow-meow tulaliloo con nos.
+CIBLE : Le chat danse avec nous.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu veut jouer.
+CIBLE : Tu wanta papoy.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu wanta papoy.
+CIBLE : Tu veut jouer.
+
+TÂCHE : Français -> Minionese
+SOURCE : Moi !
+CIBLE : Me! Me!
+
+TÂCHE : Minionese -> Français
+SOURCE : Me! Me!
+CIBLE : Moi !
+
+TÂCHE : Français -> Minionese
+SOURCE : Je suis prêt.
+CIBLE : Me es ready-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me es ready-o.
+CIBLE : Je suis prêt.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le vélo est prêt.
+CIBLE : Da bike-o es ready-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da bike-o es ready-o.
+CIBLE : Le vélo est prêt.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu cherche la sortie.
+CIBLE : Tu looka for da exit-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu looka for da exit-o.
+CIBLE : Tu cherche la sortie.
+
+TÂCHE : Français -> Minionese
+SOURCE : Regarde cette voiture !
+CIBLE : Looka dis vroom-vroom!
+
+TÂCHE : Minionese -> Français
+SOURCE : Looka dis vroom-vroom!
+CIBLE : Regarde cette voiture !
+
+TÂCHE : Français -> Minionese
+SOURCE : À ton tour de choisir.
+CIBLE : Now-now ti turn-o to choose-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Now-now ti turn-o to choose-o.
+CIBLE : À ton tour de choisir.
+
+TÂCHE : Français -> Minionese
+SOURCE : Répète, s'il te plaît.
+CIBLE : Say-y encora, pliz.
+
+TÂCHE : Minionese -> Français
+SOURCE : Say-y encora, pliz.
+CIBLE : Répète, s'il te plaît.
+
+TÂCHE : Français -> Minionese
+SOURCE : Fais de beaux rêves.
+CIBLE : Dream-o bello-bello.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dream-o bello-bello.
+CIBLE : Fais de beaux rêves.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je suis fier de toi.
+CIBLE : Me es proud-o of tu.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me es proud-o of tu.
+CIBLE : Je suis fier de toi.
+
+TÂCHE : Français -> Minionese
+SOURCE : Ça marche !
+CIBLE : It work-y!
+
+TÂCHE : Minionese -> Français
+SOURCE : It work-y!
+CIBLE : Ça marche !
+
+TÂCHE : Français -> Minionese
+SOURCE : Vérifie le résultat.
+CIBLE : Check-o da result-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Check-o da result-o.
+CIBLE : Vérifie le résultat.
+
+TÂCHE : Français -> Minionese
+SOURCE : Pas moi.
+CIBLE : No me.
+
+TÂCHE : Minionese -> Français
+SOURCE : No me.
+CIBLE : Pas moi.
+
+TÂCHE : Français -> Minionese
+SOURCE : Entre, je t'en prie.
+CIBLE : Come-y in-da, pliz.
+
+TÂCHE : Minionese -> Français
+SOURCE : Come-y in-da, pliz.
+CIBLE : Entre, je t'en prie.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je veux une glace à la banane.
+CIBLE : Me wanta banana gelato.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me wanta banana gelato.
+CIBLE : Je veux une glace à la banane.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je reviens tout de suite.
+CIBLE : Me back-y now-now.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me back-y now-now.
+CIBLE : Je reviens tout de suite.
+
+TÂCHE : Français -> Minionese
+SOURCE : C'est une surprise !
+CIBLE : Dis es ta-da-bello!
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis es ta-da-bello!
+CIBLE : C'est une surprise !
+
+TÂCHE : Français -> Minionese
+SOURCE : Garde le secret.
+CIBLE : Keep-o da shh-poka.
+
+TÂCHE : Minionese -> Français
+SOURCE : Keep-o da shh-poka.
+CIBLE : Garde le secret.
+
+TÂCHE : Français -> Minionese
+SOURCE : Arrête-toi ici.
+CIBLE : Stop-o here-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Stop-o here-o.
+CIBLE : Arrête-toi ici.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu as tort.
+CIBLE : Tu es wrong-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu es wrong-o.
+CIBLE : Tu as tort.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je suis triste aujourd'hui.
+CIBLE : Me es boo-hoo today-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me es boo-hoo today-o.
+CIBLE : Je suis triste aujourd'hui.
+
+TÂCHE : Français -> Minionese
+SOURCE : Mon ami cherche la sortie.
+CIBLE : Mi amigo looka for da exit-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Mi amigo looka for da exit-o.
+CIBLE : Mon ami cherche la sortie.
+
+TÂCHE : Français -> Minionese
+SOURCE : Il fait chaud.
+CIBLE : Phew, es hot-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Phew, es hot-o.
+CIBLE : Il fait chaud.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le chat dort ici.
+CIBLE : Da meow-meow zzz here-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da meow-meow zzz here-o.
+CIBLE : Le chat dort ici.
+
+TÂCHE : Français -> Minionese
+SOURCE : C'est compliqué.
+CIBLE : Dis es compli-crazy.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis es compli-crazy.
+CIBLE : C'est compliqué.
+
+TÂCHE : Français -> Minionese
+SOURCE : La voiture veut jouer.
+CIBLE : Da vroom-vroom wanta papoy.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da vroom-vroom wanta papoy.
+CIBLE : La voiture veut jouer.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu peux y arriver.
+CIBLE : Tu poka-can do it-o!
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu poka-can do it-o!
+CIBLE : Tu peux y arriver.
+
+TÂCHE : Français -> Minionese
+SOURCE : Attends-moi ici !
+CIBLE : Wait-y me here-o!
+
+TÂCHE : Minionese -> Français
+SOURCE : Wait-y me here-o!
+CIBLE : Attends-moi ici !
+
+TÂCHE : Français -> Minionese
+SOURCE : Où sont mes clés ?
+CIBLE : Woo es mi keys-o?
+
+TÂCHE : Minionese -> Français
+SOURCE : Woo es mi keys-o?
+CIBLE : Où sont mes clés ?
+
+TÂCHE : Français -> Minionese
+SOURCE : Ferme la fenêtre.
+CIBLE : Close-o da window-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Close-o da window-o.
+CIBLE : Ferme la fenêtre.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je peux t'aider ?
+CIBLE : Poka-can me help-y tu?
+
+TÂCHE : Minionese -> Français
+SOURCE : Poka-can me help-y tu?
+CIBLE : Je peux t'aider ?
+
+TÂCHE : Français -> Minionese
+SOURCE : J'ai oublié le mot de passe.
+CIBLE : Me forget-o da pass-word-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me forget-o da pass-word-o.
+CIBLE : J'ai oublié le mot de passe.
+
+TÂCHE : Français -> Minionese
+SOURCE : Merci pour ton aide.
+CIBLE : Tank yu for ti help-y.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tank yu for ti help-y.
+CIBLE : Merci pour ton aide.
+
+TÂCHE : Français -> Minionese
+SOURCE : Fais attention.
+CIBLE : Banana-na, be careful-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Banana-na, be careful-o.
+CIBLE : Fais attention.
+
+TÂCHE : Français -> Minionese
+SOURCE : Ma famille est ici.
+CIBLE : Mi famiglia es here-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Mi famiglia es here-o.
+CIBLE : Ma famille est ici.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le robot est prêt.
+CIBLE : Da robo-bot es ready-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da robo-bot es ready-o.
+CIBLE : Le robot est prêt.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le réseau ne marche plus.
+CIBLE : Da network-o no work-y now-now.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da network-o no work-y now-now.
+CIBLE : Le réseau ne marche plus.
+
+TÂCHE : Français -> Minionese
+SOURCE : C'est incroyable !
+CIBLE : Wa-pa! Bellissimo!
+
+TÂCHE : Minionese -> Français
+SOURCE : Wa-pa! Bellissimo!
+CIBLE : C'est incroyable !
+
+TÂCHE : Français -> Minionese
+SOURCE : Je veux rentrer à la maison.
+CIBLE : Me wanta go back-o to da domo.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me wanta go back-o to da domo.
+CIBLE : Je veux rentrer à la maison.
+
+TÂCHE : Français -> Minionese
+SOURCE : Maman, regarde !
+CIBLE : Mama, looka!
+
+TÂCHE : Minionese -> Français
+SOURCE : Mama, looka!
+CIBLE : Maman, regarde !
+
+TÂCHE : Français -> Minionese
+SOURCE : Je écoute la musique.
+CIBLE : Me listen-o da la-la.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me listen-o da la-la.
+CIBLE : Je écoute la musique.
+
+TÂCHE : Français -> Minionese
+SOURCE : Merci d'être venu.
+CIBLE : Tank yu for come-y.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tank yu for come-y.
+CIBLE : Merci d'être venu.
+
+TÂCHE : Français -> Minionese
+SOURCE : Salut, mon ami !
+CIBLE : Bello, mi amigo!
+
+TÂCHE : Minionese -> Français
+SOURCE : Bello, mi amigo!
+CIBLE : Salut, mon ami !
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous dort ici.
+CIBLE : Nos zzz here-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos zzz here-o.
+CIBLE : Nous dort ici.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je répare le vélo.
+CIBLE : Me fix-o da bike-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me fix-o da bike-o.
+CIBLE : Je répare le vélo.
+
+TÂCHE : Français -> Minionese
+SOURCE : La voiture dort ici.
+CIBLE : Da vroom-vroom zzz here-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da vroom-vroom zzz here-o.
+CIBLE : La voiture dort ici.
+
+TÂCHE : Français -> Minionese
+SOURCE : Il est trop tard.
+CIBLE : Es too late-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Es too late-o.
+CIBLE : Il est trop tard.
+
+TÂCHE : Français -> Minionese
+SOURCE : La voiture a besoin d'aide.
+CIBLE : Da vroom-vroom need-o help-y.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da vroom-vroom need-o help-y.
+CIBLE : La voiture a besoin d'aide.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tout va bien.
+CIBLE : All es bueno-bello.
+
+TÂCHE : Minionese -> Français
+SOURCE : All es bueno-bello.
+CIBLE : Tout va bien.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tout est possible.
+CIBLE : All es poka-can!
+
+TÂCHE : Minionese -> Français
+SOURCE : All es poka-can!
+CIBLE : Tout est possible.
+
+TÂCHE : Français -> Minionese
+SOURCE : Surprise !
+CIBLE : Ta-da-bello!
+
+TÂCHE : Minionese -> Français
+SOURCE : Ta-da-bello!
+CIBLE : Surprise !
+
+TÂCHE : Français -> Minionese
+SOURCE : J'ai passé une bonne journée.
+CIBLE : Mi day-o es bellissimo.
+
+TÂCHE : Minionese -> Français
+SOURCE : Mi day-o es bellissimo.
+CIBLE : J'ai passé une bonne journée.
+
+TÂCHE : Français -> Minionese
+SOURCE : Passe-moi l'outil.
+CIBLE : Pass-o mi tool-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Pass-o mi tool-o.
+CIBLE : Passe-moi l'outil.
+
+TÂCHE : Français -> Minionese
+SOURCE : Celle-ci est meilleure.
+CIBLE : Dis one es better-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis one es better-o.
+CIBLE : Celle-ci est meilleure.
+
+TÂCHE : Français -> Minionese
+SOURCE : Parle plus lentement.
+CIBLE : Talk-o mini-mini slow-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Talk-o mini-mini slow-o.
+CIBLE : Parle plus lentement.
+
+TÂCHE : Français -> Minionese
+SOURCE : Je dois partir.
+CIBLE : Me must go-y.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me must go-y.
+CIBLE : Je dois partir.
+
+TÂCHE : Français -> Minionese
+SOURCE : Non, pas maintenant.
+CIBLE : No, no now-now.
+
+TÂCHE : Minionese -> Français
+SOURCE : No, no now-now.
+CIBLE : Non, pas maintenant.
+
+TÂCHE : Français -> Minionese
+SOURCE : Explique-moi encore une fois.
+CIBLE : Explain-o to me encora one time-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Explain-o to me encora one time-o.
+CIBLE : Explique-moi encore une fois.
+
+TÂCHE : Français -> Minionese
+SOURCE : Le sol est glissant.
+CIBLE : Da floor-o es slip-slop.
+
+TÂCHE : Minionese -> Français
+SOURCE : Da floor-o es slip-slop.
+CIBLE : Le sol est glissant.
+
+TÂCHE : Français -> Minionese
+SOURCE : Nous sommes en retard !
+CIBLE : Nos late-o, bap-bap!
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos late-o, bap-bap!
+CIBLE : Nous sommes en retard !
+
+TÂCHE : Français -> Minionese
+SOURCE : Célébrons ça !
+CIBLE : Nos par-tay!
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos par-tay!
+CIBLE : Célébrons ça !
+
+TÂCHE : Français -> Minionese
+SOURCE : À demain !
+CIBLE : See-y tomoro!
+
+TÂCHE : Minionese -> Français
+SOURCE : See-y tomoro!
+CIBLE : À demain !
+
+TÂCHE : Français -> Minionese
+SOURCE : Allons danser !
+CIBLE : Nos go tulaliloo!
+
+TÂCHE : Minionese -> Français
+SOURCE : Nos go tulaliloo!
+CIBLE : Allons danser !
+
+TÂCHE : Français -> Minionese
+SOURCE : Cette musique est géniale !
+CIBLE : Dis la-la es bellissimo!
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis la-la es bellissimo!
+CIBLE : Cette musique est géniale !
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu écoute la musique.
+CIBLE : Tu listen-o da la-la.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu listen-o da la-la.
+CIBLE : Tu écoute la musique.
+
+TÂCHE : Français -> Minionese
+SOURCE : Tu es mon meilleur ami.
+CIBLE : Tu es mi amigo-forte.
+
+TÂCHE : Minionese -> Français
+SOURCE : Tu es mi amigo-forte.
+CIBLE : Tu es mon meilleur ami.
+
+TÂCHE : Français -> Minionese
+SOURCE : C'est ton tour.
+CIBLE : Dis es ti turn-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Dis es ti turn-o.
+CIBLE : C'est ton tour.
+
+TÂCHE : Français -> Minionese
+SOURCE : Encore une banane !
+CIBLE : Encora one banana!
+
+TÂCHE : Minionese -> Français
+SOURCE : Encora one banana!
+CIBLE : Encore une banane !
+
+TÂCHE : Français -> Minionese
+SOURCE : Tourne à gauche.
+CIBLE : Turn-o left-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : Turn-o left-o.
+CIBLE : Tourne à gauche.
+
+TÂCHE : Français -> Minionese
+SOURCE : N'oublie pas de fermer la porte.
+CIBLE : No forget-o close-o da door-o.
+
+TÂCHE : Minionese -> Français
+SOURCE : No forget-o close-o da door-o.
+CIBLE : N'oublie pas de fermer la porte.
+
+TÂCHE : Français -> Minionese
+SOURCE : Bienvenue chez nous.
+CIBLE : Welcome-o to mi domo.
+
+TÂCHE : Minionese -> Français
+SOURCE : Welcome-o to mi domo.
+CIBLE : Bienvenue chez nous.
+
+TÂCHE : Français -> Minionese
+SOURCE : J'ai faim, je veux manger.
+CIBLE : Me tum-tum, me wanta nom-nom.
+
+TÂCHE : Minionese -> Français
+SOURCE : Me tum-tum, me wanta nom-nom.
+CIBLE : J'ai faim, je veux manger.
+
+TÂCHE : Français -> Minionese
+SOURCE : Ça ne va pas.
+CIBLE : No es bueno-bello.
+
+TÂCHE : Minionese -> Français
+SOURCE : No es bueno-bello.
+CIBLE : Ça ne va pas.
+

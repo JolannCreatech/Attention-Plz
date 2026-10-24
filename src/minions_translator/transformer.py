@@ -1,6 +1,6 @@
 from torch import nn
-from yoda.coders import Encoder, Decoder
-from yoda.utils import Embedding, PositionalEncoding
+from minions_translator.coders import Encoder, Decoder
+from minions_translator.utils import Embedding, PositionalEncoding
 
 class Transformer (nn.Module):
     def __init__(self, i_embedding_dim, num_h, hidden_dim, vocab_size):
@@ -18,11 +18,14 @@ class Transformer (nn.Module):
         return self.positional_encoding(x)
     
     def forward(self, x, y):
+        source_padding_mask = (x == 0)
+        target_padding_mask = (y == 0)
+        
         source = self.embed(x)
         target = self.embed(y)
 
-        encoder_output = self.encoder(source)
-        decoder_output = self.decoder(target, encoder_output)
+        encoder_output = self.encoder(source, source_padding_mask=source_padding_mask)
+        decoder_output = self.decoder(target, encoder_output, source_padding_mask=source_padding_mask, target_padding_mask=target_padding_mask)
        
         return self.output_projection(decoder_output)
 

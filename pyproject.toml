@@ -1,5 +1,5 @@
 [project]
-name = "yoda"
+name = "minions_translator"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -8,13 +8,14 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "click>=8.5.0",
     "numpy>=2.5.4",
-    "tiktoken>=0.14.0",
+    "tokenizers>=0.23.3",
     "torch>=2.14.1",
 ]
 
 [project.scripts]
-yoda = "yoda.cli:main"
+minions = "minions_translator.cli:main"
 
 [build-system]
 requires = ["uv_build>=0.12.16,<0.13.0"]

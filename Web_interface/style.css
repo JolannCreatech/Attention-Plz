@@ -1,31 +1,32 @@
 /* ============================================================================
-   Yoda — interface web
+   Traducteur minion — interface web
    Tout le personnage est dessiné en CSS : pas d'image, pas de SVG.
    La bouche est pilotée par la variable --mouth-open (0 → 1), que script.js
-   met à jour. On pourra donc la faire bouger à chaque token reçu du modèle.
+   met à jour. On pourra donc la faire bouger à chaque token du modèle.
    ========================================================================== */
 
 :root {
-  --bg-0: #0a1310;
-  --bg-1: #122019;
+  --bg-0: #0a1420;
+  --bg-1: #0e1b2a;
 
-  --peau-0: #b3cd78;
-  --peau-1: #93b157;
-  --peau-2: #77963f;
-  --peau-3: #5f7c33;
+  --jaune-0: #fff08a;
+  --jaune-1: #ffe14d;
+  --jaune-2: #f5cf1c;
+  --jaune-3: #d9b000;
 
-  --oeil: #f7f0cf;
-  --pupille: #182013;
+  --metal-0: #e7eaed;
+  --metal-1: #b9bfc4;
+  --metal-2: #8b9196;
 
-  --bulle-fond: #f2ead4;
-  --bulle-fond-2: #e6dabc;
-  --bulle-texte: #1d271b;
+  --denim-0: #4a7fbe;
+  --denim-1: #35629b;
 
-  --robe-0: #c3b190;
-  --robe-1: #a8946f;
-  --robe-2: #8a7756;
+  --bulle-fond: #fdfdf6;
+  --bulle-fond-2: #f0eee2;
+  --bulle-texte: #1c2430;
 
-  --accent: #b6d97a;
+  --accent: #ffe14d;
+  --encre: #e8eef5;
 
   --sortie: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -44,11 +45,11 @@ body {
   padding: 32px 16px 40px;
 
   background:
-    radial-gradient(120% 75% at 50% -10%, #1b3a2c 0%, transparent 58%),
-    radial-gradient(90% 55% at 50% 108%, #0e1a14 0%, transparent 70%),
+    radial-gradient(120% 75% at 50% -10%, #16334e 0%, transparent 58%),
+    radial-gradient(90% 55% at 50% 108%, #08111b 0%, transparent 70%),
     var(--bg-0);
 
-  color: #e8efdd;
+  color: var(--encre);
   font-family: ui-serif, Georgia, "Times New Roman", serif;
 }
 
@@ -60,18 +61,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
-/* ---------------------------------------------------------------- Rappel de la question */
+/* ---------------------------------------------------------------- Rappel du texte source */
 
 .echo {
   margin: 0;
   font-family: ui-monospace, "SF Mono", Menlo, monospace;
   font-size: 0.72rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(232, 239, 221, 0.38);
+  color: rgba(232, 238, 245, 0.4);
   transition: opacity 0.4s var(--sortie);
 }
 
@@ -95,13 +96,13 @@ body {
   line-height: 1.58;
 
   box-shadow:
-    0 18px 44px rgba(0, 0, 0, 0.48),
+    0 18px 44px rgba(0, 0, 0, 0.5),
     inset 0 0 0 1px rgba(255, 255, 255, 0.55);
 
   transition: transform 0.45s var(--sortie), opacity 0.3s ease;
 }
 
-/* La queue de la bulle, qui pointe vers Yoda */
+/* La queue de la bulle, qui pointe vers le Minion */
 .bulle::after {
   content: "";
   position: absolute;
@@ -124,7 +125,7 @@ body {
   overflow-wrap: anywhere;
 }
 
-/* Le curseur clignote pendant que la réponse arrive */
+/* Le curseur clignote pendant que la traduction arrive */
 .bulle[data-state="parle"] .bulle__texte::after {
   content: "▍";
   margin-left: 2px;
@@ -149,29 +150,29 @@ body.is-thinking .bulle {
 
 /* ---------------------------------------------------------------- Le personnage */
 
-.yoda {
+.minion {
   --mouth-open: 0;
 
   position: relative;
   width: 340px;
-  height: 400px;
+  height: 420px;
   flex: 0 0 auto;
 
   cursor: pointer;
 
   animation: flotte 6.5s ease-in-out infinite;
-  filter: drop-shadow(0 26px 44px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 26px 44px rgba(0, 0, 0, 0.5));
   transition: filter 0.25s ease;
 }
 
-.yoda:hover {
-  filter: drop-shadow(0 26px 44px rgba(0, 0, 0, 0.55)) brightness(1.05);
+.minion:hover {
+  filter: drop-shadow(0 26px 44px rgba(0, 0, 0, 0.5)) brightness(1.04);
 }
 
-.yoda:focus-visible {
-  outline: 3px solid rgba(182, 217, 122, 0.6);
+.minion:focus-visible {
+  outline: 3px solid rgba(255, 225, 77, 0.6);
   outline-offset: 12px;
-  border-radius: 48px;
+  border-radius: 60px;
 }
 
 @keyframes flotte {
@@ -179,180 +180,296 @@ body.is-thinking .bulle {
   50% { transform: translateY(-9px); }
 }
 
-/* Halo derrière le personnage */
-.yoda::before {
+/* Halo doré derrière le personnage */
+.minion::before {
   content: "";
   position: absolute;
   left: 50%;
-  top: 46%;
-  width: 400px;
-  height: 400px;
-  margin: -200px 0 0 -200px;
+  top: 52%;
+  width: 420px;
+  height: 420px;
+  margin: -210px 0 0 -210px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(150, 200, 110, 0.2) 0%, transparent 62%);
+  background: radial-gradient(circle, rgba(255, 214, 60, 0.2) 0%, transparent 62%);
   z-index: -1;
 }
 
-/* --- Oreilles ------------------------------------------------------------- */
-
-.yoda__ears {
-  position: absolute;
-  left: 50%;
-  top: 130px;
-  width: 250px;
-  height: 0;
-  margin-left: -125px;
-}
-
-.ear {
-  position: absolute;
-  width: 104px;
-  height: 74px;
-  background: linear-gradient(180deg, #a3c066 0%, #86a54a 45%, #6a8738 100%);
-  filter: drop-shadow(0 6px 9px rgba(0, 0, 0, 0.3));
-}
-
-/* Léger relief : plus clair en haut, ombré en bas */
-.ear::after {
+/* Les deux chaussures : une seule boîte, la seconde en ombre portée */
+.minion::after {
   content: "";
   position: absolute;
-  inset: 8% 10% 10% 10%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.14) 0%,
-    rgba(64, 86, 28, 0.08) 45%,
-    rgba(44, 62, 18, 0.4) 100%
-  );
+  left: 62px;
+  bottom: 4px;
+  width: 54px;
+  height: 26px;
+  border-radius: 50% 50% 40% 40%;
+  background: #33333d;
+  box-shadow:
+    162px 0 0 #33333d,
+    inset 0 3px 0 rgba(255, 255, 255, 0.13);
 }
 
-/* Les oreilles s'attachent au niveau des yeux et ne dépassent que de 74px :
-   le tiers de leur longueur reste caché derrière la tête. */
-.ear--left {
-  left: -74px;
-  top: 0;
-  clip-path: polygon(100% 12%, 4% 40%, 100% 88%);
-}
+/* --- Les cheveux --------------------------------------------------------- */
 
-.ear--right {
-  right: -74px;
-  top: 0;
-  clip-path: polygon(0% 12%, 96% 40%, 0% 88%);
-}
-
-/* --- Tête ---------------------------------------------------------------- */
-
-.yoda__head {
+.minion__hair {
   position: absolute;
   left: 50%;
-  top: 70px;
-  width: 250px;
-  height: 200px;
-  margin-left: -125px;
+  top: 58px;
+  width: 96px;
+  height: 40px;
+  margin-left: -48px;
+}
 
-  border-radius: 48% 48% 40% 40% / 58% 58% 42% 42%;
+.minion__hair i {
+  position: absolute;
+  bottom: 0;
+  width: 5px;
+  border-radius: 3px;
+  background: #1d1d22;
+  transform-origin: bottom center;
+}
+
+.minion__hair i:nth-child(1) { left: 20px; height: 30px; transform: rotate(-20deg); }
+.minion__hair i:nth-child(2) { left: 45px; height: 38px; transform: rotate(-3deg); }
+.minion__hair i:nth-child(3) { left: 70px; height: 28px; transform: rotate(17deg); }
+
+/* --- Les bras ------------------------------------------------------------ */
+
+.minion__arm {
+  position: absolute;
+  bottom: 92px;
+  width: 42px;
+  height: 98px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, var(--jaune-1), var(--jaune-2));
+  box-shadow: inset -6px 0 12px rgba(150, 110, 0, 0.25);
+
+  /* Le bras pend depuis l'épaule : c'est le haut qui sert d'axe. */
+  transform-origin: top center;
+
+  /* La bouche fait osciller les bras (voir `rotate` plus bas). 200 ms : assez
+     lent pour ne pas trembler au rythme des tokens, assez vif pour lever les
+     bras d'un coup quand il commence à parler. */
+  transition: rotate 200ms ease-out, translate 200ms ease-out;
+}
+
+/* Au repos, la bouche ne fait qu'un petit mouvement d'épaule. */
+.minion__arm--left {
+  left: 30px;
+
+  /* `rotate` et `translate` (propriétés individuelles) se combinent avec
+     `transform` : l'animation de flottement continue de tourner, et la bouche
+     ajoute son angle par-dessus.
+     Le bras gauche s'écarte vers la gauche : angle positif (le point sous
+     l'axe part à gauche). Le bras droit, c'est l'inverse. */
+  rotate: calc(var(--mouth-open) * 22deg);
+  translate: 0 calc(var(--mouth-open) * -3px);
+
+  animation: bras-gauche 4.6s ease-in-out infinite;
+}
+
+.minion__arm--right {
+  right: 30px;
+  rotate: calc(var(--mouth-open) * -22deg);
+  translate: 0 calc(var(--mouth-open) * -3px);
+  animation: bras-droit 4.6s ease-in-out infinite;
+  animation-delay: -1.6s;
+}
+
+/* Uniquement quand il ENVOIE sa réponse ou quand on clique dessus.
+   Bras bien en l'air en mode \O/ avec un balancier bien marqué au rythme des tokens. */
+.minion.is-answering .minion__arm--left,
+.minion.is-reaction .minion__arm--left {
+  rotate: calc(138deg + var(--mouth-open) * 42deg);
+  translate: -8px calc(-22px - var(--mouth-open) * 12px);
+  animation: bras-gauche-parle 0.19s ease-in-out infinite;
+}
+
+.minion.is-answering .minion__arm--right,
+.minion.is-reaction .minion__arm--right {
+  rotate: calc(-138deg - var(--mouth-open) * 42deg);
+  translate: 8px calc(-22px - var(--mouth-open) * 12px);
+  animation: bras-droit-parle 0.19s ease-in-out infinite;
+  animation-delay: 0.095s;
+}
+
+@keyframes bras-gauche {
+  0%, 100% { transform: rotate(6deg); }
+  50%      { transform: rotate(12deg); }
+}
+
+@keyframes bras-droit {
+  0%, 100% { transform: rotate(-6deg); }
+  50%      { transform: rotate(-12deg); }
+}
+
+/* Quand il donne sa réponse, les bras s'agitent encore plus fort. */
+.minion.is-answering .minion__arm {
+  animation-duration: 0.19s !important;
+}
+
+@keyframes bras-gauche-parle {
+  0%, 100% { transform: rotate(0deg) translateY(0px) translateX(0px); }
+  15%      { transform: rotate(-12deg) translateY(-14px) translateX(-2px); }
+  30%      { transform: rotate(-4deg) translateY(-22px) translateX(-4px); }
+  45%      { transform: rotate(8deg) translateY(-18px) translateX(-3px); }
+  60%      { transform: rotate(14deg) translateY(-26px) translateX(-2px); }
+  75%      { transform: rotate(-6deg) translateY(-16px) translateX(-4px); }
+  90%      { transform: rotate(-10deg) translateY(-12px) translateX(-2px); }
+}
+
+@keyframes bras-droit-parle {
+  0%, 100% { transform: rotate(0deg) translateY(0px) translateX(0px); }
+  15%      { transform: rotate(12deg) translateY(-14px) translateX(2px); }
+  30%      { transform: rotate(4deg) translateY(-22px) translateX(4px); }
+  45%      { transform: rotate(-8deg) translateY(-18px) translateX(3px); }
+  60%      { transform: rotate(-14deg) translateY(-26px) translateX(2px); }
+  75%      { transform: rotate(6deg) translateY(-16px) translateX(4px); }
+  90%      { transform: rotate(10deg) translateY(-12px) translateX(2px); }
+}
+
+/* Le gant noir */
+.minion__arm::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  width: 36px;
+  height: 32px;
+  margin-left: -18px;
+  border-radius: 50% 50% 44% 44%;
+  background: #2e2e37;
+  box-shadow:
+    inset 0 3px 0 rgba(255, 255, 255, 0.14),
+    0 3px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* --- Le corps ------------------------------------------------------------ */
+
+.minion__body {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  width: 232px;
+  height: 322px;
+  margin-left: -116px;
+
+  border-radius: 46% 46% 32% 32% / 40% 40% 20% 20%;
 
   background: radial-gradient(
-    120% 125% at 50% 6%,
-    var(--peau-0) 0%,
-    var(--peau-1) 38%,
-    var(--peau-2) 70%,
-    var(--peau-3) 100%
+    125% 105% at 50% 6%,
+    var(--jaune-0) 0%,
+    var(--jaune-1) 38%,
+    var(--jaune-2) 72%,
+    var(--jaune-3) 100%
   );
 
   box-shadow:
-    inset -16px -20px 34px rgba(20, 38, 14, 0.42),
-    inset 12px 14px 30px rgba(255, 255, 255, 0.1);
+    inset -20px -16px 44px rgba(150, 110, 0, 0.35),
+    inset 18px 12px 38px rgba(255, 255, 255, 0.4);
+
+  overflow: hidden;
 }
 
-/* --- Plis du front ------------------------------------------------------- */
+/* La sangle des lunettes, qui fait le tour de la tête */
+.minion__strap {
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: 66px;
+  height: 64px;
+  background: linear-gradient(180deg, #3b3c42 0%, #26262c 100%);
+}
 
-.yoda__wrinkles {
+/* --- Les lunettes -------------------------------------------------------- */
+
+.minion__goggles {
   position: absolute;
   left: 50%;
-  top: 22px;
-  width: 122px;
-  margin-left: -61px;
+  top: 58px;
+  transform: translateX(-50%);
+  display: flex;
 }
 
-.yoda__wrinkles i {
-  display: block;
-  height: 13px;
-  border-top: 3px solid rgba(56, 78, 28, 0.45);
+.minion__goggle {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+  background: radial-gradient(
+    circle at 50% 30%,
+    var(--metal-0) 0%,
+    var(--metal-1) 52%,
+    var(--metal-2) 100%
+  );
+
+  box-shadow:
+    0 3px 7px rgba(0, 0, 0, 0.35),
+    inset 0 -4px 7px rgba(0, 0, 0, 0.22),
+    inset 0 3px 6px rgba(255, 255, 255, 0.55);
 }
 
-.yoda__wrinkles i:nth-child(1) { width: 122px; }
-.yoda__wrinkles i:nth-child(2) { width: 98px; margin: -7px auto 0; }
-.yoda__wrinkles i:nth-child(3) { width: 74px; margin: -7px auto 0; }
-
-/* --- Sourcils ------------------------------------------------------------ */
-
-.brow {
-  position: absolute;
-  top: 60px;
-  width: 64px;
-  height: 15px;
-  background: #4e6626;
-  border-radius: 50% 50% 30% 30%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+/* Les deux loupes se touchent presque */
+.minion__goggle + .minion__goggle {
+  margin-left: -4px;
 }
-
-.brow--left {
-  left: 40px;
-  transform: rotate(-9deg);
-}
-
-.brow--right {
-  right: 40px;
-  transform: rotate(9deg);
-}
-
-/* --- Yeux ---------------------------------------------------------------- */
 
 .eye {
-  position: absolute;
-  top: 82px;
-  width: 66px;
-  height: 48px;
+  position: relative;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   overflow: hidden;
 
   background: radial-gradient(
-    circle at 50% 38%,
-    #fdf8dd 0%,
-    var(--oeil) 42%,
-    #ddd09b 78%,
-    #bfb079 100%
+    circle at 50% 34%,
+    #ffffff 0%,
+    #f6f4ec 58%,
+    #ddd9c9 100%
   );
 
-  box-shadow:
-    inset 0 -9px 13px rgba(58, 58, 18, 0.24),
-    0 1px 0 rgba(255, 255, 255, 0.16);
+  box-shadow: inset 0 -8px 12px rgba(60, 50, 20, 0.18);
 }
 
-.eye--left { left: 43px; }
-.eye--right { right: 43px; }
-
-.pupil {
+.iris {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 25px;
-  height: 31px;
-  margin: -15.5px 0 0 -12.5px;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
   border-radius: 50%;
-  background: radial-gradient(circle at 38% 32%, #3a4a2e 0%, var(--pupille) 62%);
-  transition: transform 0.3s var(--sortie);
+  background: radial-gradient(
+    circle at 40% 32%,
+    #9a6a35 0%,
+    #6b4420 62%,
+    #4a2e13 100%
+  );
+}
+
+/* La pupille */
+.iris::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 13px;
+  height: 13px;
+  margin: -6.5px 0 0 -6.5px;
+  border-radius: 50%;
+  background: #1a120b;
 }
 
 /* Le reflet */
-.pupil::after {
+.iris::after {
   content: "";
   position: absolute;
-  left: 5px;
-  top: 5px;
-  width: 7px;
-  height: 7px;
+  left: 4px;
+  top: 3px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.9);
 }
@@ -362,9 +479,9 @@ body.is-thinking .bulle {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, var(--peau-1), var(--peau-2));
+  background: linear-gradient(180deg, var(--jaune-1), var(--jaune-2));
   transform: translateY(-101%);
-  animation: cligne 6.4s ease-in-out infinite;
+  animation: cligne 6.2s ease-in-out infinite;
 }
 
 @keyframes cligne {
@@ -372,46 +489,32 @@ body.is-thinking .bulle {
   93.5%, 96% { transform: translateY(0); }
 }
 
-/* En réfléchissant, Yoda plisse les yeux */
+/* En réfléchissant, il plisse les yeux */
 body.is-thinking .eye::after {
   animation: none;
-  transform: translateY(46%);
-}
-
-/* --- Nez ----------------------------------------------------------------- */
-
-.yoda__nose {
-  position: absolute;
-  left: 50%;
-  top: 124px;
-  width: 26px;
-  height: 24px;
-  margin-left: -13px;
-  border-radius: 50% 50% 45% 45% / 40% 40% 60% 60%;
-  background: linear-gradient(180deg, #9ab75a 0%, var(--peau-2) 80%, #6a8638 100%);
-  box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.28);
+  transform: translateY(48%);
 }
 
 /* --- La bouche (l'élément animé) ----------------------------------------- */
 
-.yoda__mouth {
+.minion__mouth {
   position: absolute;
   left: 50%;
-  top: 176px;
-  width: 64px;
-  margin-left: -32px;
+  top: 196px;
+  width: 98px;
+  margin-left: -49px;
   transform: translateY(-50%);
 
   /* C'est ici que tout se joue : 0 = fermée, 1 = grande ouverte. */
-  height: calc(4px + var(--mouth-open) * 27px);
+  height: calc(8px + var(--mouth-open) * 42px);
 
   border-radius: 50%;
   overflow: hidden;
-  background: #2a1a15;
+  background: #43201a;
 
   box-shadow:
-    0 0 0 2px rgba(72, 94, 32, 0.6),
-    inset 0 5px 9px rgba(0, 0, 0, 0.85);
+    0 0 0 3px rgba(217, 176, 0, 0.55),
+    inset 0 5px 10px rgba(0, 0, 0, 0.7);
 
   transition: height 70ms linear;
 }
@@ -420,72 +523,128 @@ body.is-thinking .eye::after {
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    70% 90% at 50% 15%,
-    #4a2a20 0%,
-    #2a1a15 45%,
-    #140b08 100%
+    70% 90% at 50% 12%,
+    #6a352a 0%,
+    #43201a 45%,
+    #1d0d09 100%
   );
+}
+
+.mouth__teeth {
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  width: 62px;
+  height: 14px;
+  margin-left: -31px;
+  border-radius: 0 0 8px 8px;
+  background: linear-gradient(180deg, #fffdf2, #e6e0cd);
+  opacity: calc(var(--mouth-open) * 1.4);
 }
 
 .mouth__tongue {
   position: absolute;
   left: 50%;
-  bottom: -7px;
-  width: 36px;
-  height: 17px;
-  margin-left: -18px;
+  bottom: -8px;
+  width: 46px;
+  height: 20px;
+  margin-left: -23px;
   border-radius: 50% 50% 0 0;
   background: linear-gradient(180deg, #cd7670 0%, #a44d4b 100%);
   opacity: calc(var(--mouth-open) * 1.7);
 }
 
-/* --- Robe ---------------------------------------------------------------- */
+/* --- La salopette -------------------------------------------------------- */
 
-.yoda__robe {
+.minion__overalls {
   position: absolute;
-  left: 50%;
+  left: 0;
+  right: 0;
   bottom: 0;
-  width: 254px;
-  height: 132px;
-  margin-left: -127px;
-
-  border-radius: 46% 46% 0 0 / 68% 68% 0 0;
-
-  background: linear-gradient(
-    180deg,
-    var(--robe-0) 0%,
-    var(--robe-1) 46%,
-    var(--robe-2) 100%
-  );
-
-  box-shadow:
-    inset -20px 0 34px rgba(0, 0, 0, 0.22),
-    inset 20px 0 34px rgba(0, 0, 0, 0.14);
+  height: 96px;
 }
 
-/* L'encolure en V */
-.yoda__robe::before {
-  content: "";
+.overalls__bib {
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: 10px;
+  bottom: -2px;
+
+  border-radius: 30px 30px 0 0;
+  background: linear-gradient(180deg, var(--denim-0) 0%, var(--denim-1) 100%);
+  box-shadow:
+    inset 0 3px 0 rgba(255, 255, 255, 0.18),
+    0 -2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Les bretelles : du haut de la salopette jusqu'aux épaules.
+   Elles sont placées avant les lunettes dans le HTML, donc les lunettes
+   passent par-dessus : la bretelle file derrière la monture. */
+.minion__straps {
+  position: absolute;
+  inset: 0;
+}
+
+.minion__straps i {
+  position: absolute;
+  top: 110px;
+  width: 26px;
+  height: 136px;
+  border-radius: 9px;
+  background: linear-gradient(180deg, var(--denim-0), var(--denim-1));
+  box-shadow: inset 2px 0 0 rgba(255, 255, 255, 0.15);
+  transform-origin: bottom center;
+}
+
+.minion__straps i:first-child {
+  left: 26px;
+  transform: rotate(-9deg);
+}
+
+.minion__straps i:last-child {
+  right: 26px;
+  transform: rotate(9deg);
+}
+
+/* La poche, avec le logo */
+.overalls__pocket {
   position: absolute;
   left: 50%;
-  top: 0;
-  width: 0;
-  height: 0;
-  margin-left: -48px;
-  border-left: 48px solid transparent;
-  border-right: 48px solid transparent;
-  border-top: 58px solid #7e6b4d;
+  bottom: 18px;
+  width: 78px;
+  height: 48px;
+  margin-left: -39px;
+
+  border-radius: 10px 10px 14px 14px;
+  background: linear-gradient(180deg, #5b8fce, #4276b0);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.22),
+    0 3px 6px rgba(0, 0, 0, 0.2);
+
+  display: grid;
+  place-items: center;
+}
+
+.overalls__logo {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #1e2632;
+  color: #fffdf3;
+  font: 700 15px/26px ui-sans-serif, system-ui, sans-serif;
+  text-align: center;
 }
 
 /* --- Réaction au clic ----------------------------------------------------
    Les yeux se ferment, la bouche s'ouvre : script.js ajoute `is-reaction`
    le temps de la réaction, et anime la bouche via --mouth-open.          */
 
-.yoda.is-reaction {
+.minion.is-reaction {
   animation: sursaut 640ms var(--sortie);
 }
 
-.yoda.is-reaction .eye::after {
+.minion.is-reaction .eye::after {
   animation: none;
   transform: translateY(0);
 }
@@ -497,13 +656,59 @@ body.is-thinking .eye::after {
   100% { transform: translateY(0) rotate(0deg); }
 }
 
+/* ---------------------------------------------------------------- Le bouton de sens */
+
+.sens {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+
+  border: 1px solid rgba(255, 225, 77, 0.28);
+  border-radius: 999px;
+
+  background: rgba(14, 27, 42, 0.75);
+  color: var(--encre);
+
+  font: inherit;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s var(--sortie);
+}
+
+.sens:hover:not(:disabled) {
+  border-color: rgba(255, 225, 77, 0.7);
+  background: rgba(21, 38, 58, 0.9);
+}
+
+.sens:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.sens:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.sens:focus-visible {
+  outline: 2px solid rgba(255, 225, 77, 0.7);
+  outline-offset: 3px;
+}
+
+.sens__icone {
+  font-size: 1rem;
+  color: var(--accent);
+}
+
 /* ---------------------------------------------------------------- Le formulaire */
 
 .ask {
   display: flex;
   gap: 10px;
   width: 100%;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .ask input {
@@ -511,11 +716,11 @@ body.is-thinking .eye::after {
   min-width: 0;
   padding: 14px 18px;
 
-  border: 1px solid rgba(182, 217, 122, 0.26);
+  border: 1px solid rgba(255, 225, 77, 0.22);
   border-radius: 14px;
 
-  background: rgba(14, 26, 20, 0.72);
-  color: #e8efdd;
+  background: rgba(12, 24, 38, 0.72);
+  color: var(--encre);
 
   font: inherit;
   font-size: 1rem;
@@ -525,13 +730,13 @@ body.is-thinking .eye::after {
 }
 
 .ask input::placeholder {
-  color: rgba(232, 239, 221, 0.4);
+  color: rgba(232, 238, 245, 0.4);
 }
 
 .ask input:focus {
-  border-color: rgba(182, 217, 122, 0.72);
-  background: rgba(18, 34, 26, 0.86);
-  box-shadow: 0 0 0 4px rgba(182, 217, 122, 0.12);
+  border-color: rgba(255, 225, 77, 0.7);
+  background: rgba(16, 30, 47, 0.88);
+  box-shadow: 0 0 0 4px rgba(255, 225, 77, 0.12);
 }
 
 .ask input:disabled {
@@ -544,19 +749,19 @@ body.is-thinking .eye::after {
   border: 0;
   border-radius: 14px;
 
-  background: linear-gradient(180deg, var(--accent) 0%, #86ad4d 100%);
-  color: #14210f;
+  background: linear-gradient(180deg, var(--accent) 0%, #e6c521 100%);
+  color: #1d1a06;
 
   font-size: 1.35rem;
   line-height: 1;
   cursor: pointer;
 
-  box-shadow: 0 6px 16px rgba(134, 173, 77, 0.28);
+  box-shadow: 0 6px 16px rgba(230, 197, 33, 0.26);
 
   transition: transform 0.14s var(--sortie), filter 0.2s ease, opacity 0.2s ease;
 }
 
-.ask button:hover:not(:disabled) { filter: brightness(1.08); }
+.ask button:hover:not(:disabled) { filter: brightness(1.07); }
 .ask button:active:not(:disabled) { transform: scale(0.94); }
 
 .ask button:disabled {
@@ -578,8 +783,8 @@ body.is-thinking .eye::after {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c8e08a;
-  box-shadow: 0 0 10px 3px rgba(200, 224, 138, 0.45);
+  background: #ffe98f;
+  box-shadow: 0 0 10px 3px rgba(255, 233, 143, 0.4);
   opacity: 0;
   animation: derive 14s linear infinite;
 }
@@ -592,8 +797,8 @@ body.is-thinking .eye::after {
 
 @keyframes derive {
   0%   { opacity: 0; transform: translate(0, 0); }
-  15%  { opacity: 0.75; }
-  80%  { opacity: 0.5; }
+  15%  { opacity: 0.7; }
+  80%  { opacity: 0.45; }
   100% { opacity: 0; transform: translate(26px, -150px); }
 }
 
@@ -614,7 +819,8 @@ body.is-thinking .eye::after {
 /* ---------------------------------------------------------------- Accessibilité */
 
 @media (prefers-reduced-motion: reduce) {
-  .yoda,
+  .minion,
+  .minion__arm,
   .lucioles i,
   body.is-thinking .bulle,
   .eye::after,
@@ -622,22 +828,45 @@ body.is-thinking .eye::after {
     animation: none !important;
   }
 
-  .yoda__mouth,
+  .minion__mouth,
+  .minion__arm,
   .bulle,
-  .echo {
+  .echo,
+  .minion__body {
     transition: none;
   }
+}
+
+/* Petit balancement du corps pendant qu'il parle */
+.minion.is-answering .minion__body {
+  animation: minion-balance 0.32s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.minion.is-answering {
+  --talk-bounce: 0;
+}
+
+.minion.is-answering .minion__body {
+  scale: calc(1 + var(--talk-bounce, 0) * 0.045);
+}
+
+@keyframes minion-balance {
+  0%, 100% { transform: translateX(-50%) rotate(-4deg); }
+  25%      { transform: translateX(-50%) rotate(-2deg); }
+  50%      { transform: translateX(-50%) rotate(4deg); }
+  75%      { transform: translateX(-50%) rotate(2deg); }
 }
 
 /* ---------------------------------------------------------------- Petit écran */
 
 @media (max-width: 520px) {
-  .yoda {
+  .minion {
     /* `scale` et non `transform` : la propriété individuelle se combine avec
        l'animation `flotte`, qui anime déjà `transform`. */
     scale: 0.82;
     transform-origin: top center;
-    margin-bottom: -70px;
+    margin-bottom: -76px;
   }
 
   .bulle {
