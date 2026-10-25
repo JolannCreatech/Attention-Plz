@@ -812,49 +812,6 @@ body.is-thinking .eye::after {
   letter-spacing: 0.02em;
 }
 
-/* ---------------------------------------------------------------- Lien vers le code */
-
-.voir-code {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-
-  border: 1px solid rgba(255, 225, 77, 0.28);
-  border-radius: 999px;
-
-  background: rgba(14, 27, 42, 0.75);
-  color: var(--encre);
-
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-
-  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s var(--sortie);
-}
-
-.voir-code:hover {
-  border-color: rgba(255, 225, 77, 0.7);
-  background: rgba(21, 38, 58, 0.9);
-}
-
-.voir-code:active {
-  transform: scale(0.97);
-}
-
-.voir-code:focus-visible {
-  outline: 2px solid rgba(255, 225, 77, 0.7);
-  outline-offset: 3px;
-}
-
-.voir-code__icone {
-  color: var(--accent);
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: 0.86rem;
-}
-
-
 /* ---------------------------------------------------------------- Lucioles */
 
 .lucioles {

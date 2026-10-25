@@ -73,7 +73,7 @@ Puis ouvrez [http://localhost:8000](http://localhost:8000).
 
 Sur macOS, vous pouvez aussi double-cliquer sur `Web_interface/demarrer.command`.
 
-L'interface permet de saisir un texte, d'inverser le sens de traduction et de consulter le code du projet.
+L'interface permet de saisir un texte et d'inverser le sens de traduction.
 
 ## Options de la CLI
 
