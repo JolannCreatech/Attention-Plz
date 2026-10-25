@@ -4,6 +4,7 @@ Un petit traducteur **français ↔ minions** basé sur un Transformer encodeur-
 
 Le projet comprend l'entraînement du tokenizer BPE, l'entraînement du modèle, une CLI interactive et une interface web avec un serveur local.
 
+![interface](./images/screenshot_interface.png)
 ## Fonctionnalités
 
 - Traduction dans les deux sens : `Français → Minionese` et `Minionese → Français`
